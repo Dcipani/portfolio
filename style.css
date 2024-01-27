@@ -34,17 +34,18 @@ body{
 .container{
     padding: 10px 5%;
 }
-.content-container{
+.content-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px; /* Optional padding for spacing */
 }
 
 .headshot{
     width: 30%;
     height: 30%;
     margin-top: 15%;
-    margin-right: 25px;
-    margin-left: 20%;
+    margin-left: auto;
     box-shadow: 10px 10px 2px var(--bg-brown);
 }
 
