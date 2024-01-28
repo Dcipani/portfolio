@@ -303,3 +303,15 @@ nav{
    color: var(--burgundy);
    transform: translateY(-5px);
 }
+
+/*------------------------------------------------ COPYRIGHT ------------------------------------------------*/
+
+.copyright-footer{
+    margin-top: 400px;
+    width: 100%;
+    background: var(--bg-brown);
+    height: 60px;
+}
+.copyright-footer center{
+    padding: 20px 20px;
+}
