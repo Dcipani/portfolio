@@ -7,7 +7,7 @@
     --bg-brown: #b6947c;
     --text-color: black;
     --calamine: #e2d0ca;
-    --typewriterSpeed: 1.5s;
+    --typewriterSpeed: .7s;
 
 }
 html{
@@ -192,15 +192,17 @@ nav ul li a.active{
 }
 .header-text h1::before {
     background: var(--off-white);
-    animation: typewriter var(--typewriterSpeed) steps(13) 2.5s forwards;
+    animation: typewriter var(--typewriterSpeed) steps(13) 1.2s forwards;
 }
 .header-text h1::after {
     width: 0.125em;
     background: var(--off-white);
     animation: 
-        show 1ms 2.5s forwards,
-        blink 1s steps(2, start) 2.5s infinite,
-        typewriter var(--typewriterSpeed) steps(13) 2.5s forwards;
+        show 1ms 1.2s forwards,
+        blink 1s steps(2, start) 1.2s infinite,
+        typewriter var(--typewriterSpeed) steps(13) 1.2s forwards,
+        hide 1ms 5s forwards;
+        
 }
 .header-text h2{
     font-size: 35px;
@@ -220,21 +222,21 @@ nav ul li a.active{
 }
 .header-text h2::before {
     background: var(--off-white);
-    animation: typewriter var(--typewriterSpeed) steps(14) .75s forwards;
+    animation: typewriter var(--typewriterSpeed) steps(14) .5s forwards;
 }
 .header-text h2::after {
     width: 0.125em;
     background: black;
     animation: 
         blink 1s steps(2, start) infinite,
-        typewriter var(--typewriterSpeed) steps(14) .75s forwards,
-        hide 1ms 2.5s forwards;
+        typewriter var(--typewriterSpeed) steps(14) .5s forwards,
+        hide 1ms 1.2s forwards;
 
 }
 .header-text p{
     opacity: 0;
     transform: translateX(-3rem);
-    animation: fadeInRight 1.2s ease 3.25s forwards;
+    animation: fadeInRight .8s ease 1.75s forwards;
  }
 @keyframes typewriter {
     to {
