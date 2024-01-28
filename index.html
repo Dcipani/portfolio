@@ -8,10 +8,10 @@
     <script src="https://kit.fontawesome.com/671d949f37.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
 
 <section id="header">
     <div class="container">
-        <!-- <i class="fa-solid fa-bars"></i> -->
         <nav>
             <h1 class="logo"> <a href="#header">dc</a> </h1>
             <ul>
@@ -19,26 +19,39 @@
                 <li > <a href="#about"> ABOUT </a> </li>
                 <li > <a href="#projects" > PROJECTS </a> </li>
                 <li > <a href="#contact" > CONTACT </a> </li>
-                <!-- <i class="fa-solid fa-xmark"></i> -->
             </ul>
             
         </nav>
         <div class="container">
-            <div class="header-text">
-                <h2>Hi, my name is</h2>
-                <h1> Dario Cipani. </h1>
-                <p> I'm a CS and Linguistics student at Trinity College Dublin. </p>    
+            
+            <div class="row">
+                <div class="header-col-1">
+                    <div class="header-text">
+                        <h2>Hi, my name is</h2>
+                        <h1> Dario Cipani. </h1>
+                        <p> I'm a CS and Linguistics student at Trinity College Dublin. </p>    
+                    </div>
+                </div>
+                <div class="header-col-2">
+                    <div class="bubble">
+                    </div>
+                </div>
+               
             </div>
+            
             <div class="line-container">
                 <svg 
                     viewBox="0 0 737.28 1474.56" 
-                    preserveAspectRatio= "xMidyMax meet"
+                    preserveAspectRatio = "xMidyMin slice"
+                    width="100%" height="100%"
                     >
                 <defs/>
                 <path id="shape0" transform="translate(140.366305320625, 13.6076124149116)" fill="none" stroke="#8e2d2d" stroke-width="2.16" stroke-linecap="square" stroke-linejoin="bevel" d="M100.683 0C100.683 43.5387 82.7217 130.983 124.01 151.628C151.736 165.491 167.515 123.207 151.225 106.917C150.051 105.743 141.405 106.917 139.562 106.917C87.7709 106.917 141.792 236.604 46.2524 260.489C-14.5775 275.696 46.133 188.204 65.6918 246.881C84.6036 303.616 20.9422 367.522 5.42954 414.06C-7.50676 452.869 5.22154 495.082 17.0932 530.697C36.36 588.497 182.566 585.839 162.889 526.809C161.276 521.971 156.184 522.485 153.169 520.977C116.934 502.859 112.242 609.716 155.113 624.006C191.617 636.174 258.441 618.473 225.095 585.127C202.275 562.307 153.939 633.139 190.104 651.221C223.69 668.014 276.82 652.823 291.189 695.932C319.3 780.264 190.227 794.704 168.721 859.224C157.858 891.811 131.264 970.739 176.497 993.356C192.358 1001.29 226.836 1000.73 213.432 973.916C209.839 966.731 202.565 968.084 195.936 968.084C159.172 968.084 143.193 1017.86 155.113 1053.62C181.229 1131.97 312.158 1101.39 326.18 1129.43C337.523 1152.12 351.842 1193.97 314.517 1203.3C312.382 1203.84 298.33 1206.55 297.021 1205.25C289.008 1197.23 289.368 1156.71 312.573 1168.31C321.506 1172.78 325.453 1243.89 330.068 1257.73C346.389 1306.69 413.029 1242.87 431.153 1279.12C434.312 1285.43 429.7 1293.7 433.097 1300.5C435.401 1305.11 442.817 1318.53 442.817 1321.88" sodipodi:nodetypes="ccccccccccccccccccccccccccc"/>
                 </svg>
             </div>
+            
         </div>
+        
        
         
         </div>
@@ -46,6 +59,7 @@
     </div>
 
 </section>
+
 <section id="about">
     <div class="container">
         <div class="row">
@@ -208,11 +222,16 @@
                 </div>
             </div>
             <div class="contact-right">
-
+                <form>
+                    <input type="text" name="Name" placeholder="Your Full Name" required>
+                    <input type="email" name="Email" placeholder="Your Email Address" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type = "submit" class="submit-btn">Submit</button>
+                </form>
             </div>
         </div>
     </div>
-  
+    
 </section>
 <div class="copyright-footer">
     <center>Copyright © 2024 Dario Cipani. All rights reserved.</center>
