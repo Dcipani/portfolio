@@ -398,11 +398,12 @@ nav ul li a.active{
 
 .copyright-footer{
     margin-top: 400px;
-    width: 100%;
+    width: 100vw;
     background: var(--bg-brown);
     height: 60px;
 }
 .copyright-footer center{
+    color: var(--off-white);
     padding: 20px 20px;
 }
 
@@ -452,6 +453,9 @@ nav ul li a.active{
     .tab-links{
         font-size: 14px;
         margin-right: 20px;
+    }
+    .copyright-footer{
+        font-size: 14px;
     }
 
     
