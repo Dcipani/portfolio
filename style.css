@@ -155,15 +155,15 @@ nav ul li a.active{
 }
 .header-text h1::before {
     background: var(--off-white);
-    animation: typewriter var(--typewriterSpeed) steps(13) 2.25s forwards;
+    animation: typewriter var(--typewriterSpeed) steps(13) 2.5s forwards;
 }
 .header-text h1::after {
     width: 0.125em;
     background: var(--off-white);
     animation: 
-        show 1ms 2.2s forwards,
-        blink 1s steps(2, start) 2.25s infinite,
-        typewriter var(--typewriterSpeed) steps(13) 2.25s forwards;
+        show 1ms 2.5s forwards,
+        blink 1s steps(2, start) 2.5s infinite,
+        typewriter var(--typewriterSpeed) steps(13) 2.5s forwards;
 }
 .header-text h2{
     font-size: 35px;
