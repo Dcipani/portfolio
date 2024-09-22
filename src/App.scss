@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@font-face {
+  font-family: grunge;
+  src: url(grunge.ttf);
+}
+$bg-color: #f5f1ed;
+
+body {
+    font-family: "League Spartan", sans-serif;
+    // cursor: none;
+      background-color: $bg-color;
+    padding: 0 8vw;
+    
+    
+  }
+  .noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: url(#turbulence) contrast(150%) brightness(50%) ; /* Apply the SVG filter */
+    pointer-events: none; /* Allow interaction with elements below */
+    opacity: .3;
+    z-index: 10000;
+  }
+// .main-container {
+//   padding: 0 5vw;
+// }
+section {
+  height: 100vh;
+  width: 100%;    
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  // .section-header {
+    
+    // margin-bottom: 20px;
+  // }
+}

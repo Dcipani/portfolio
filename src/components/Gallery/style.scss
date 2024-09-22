@@ -1,0 +1,16 @@
+.gallery {
+    width: 100%;
+    padding: 20px 0;
+  
+    .gallery-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: nowrap;  // Prevent wrapping to a new line
+      overflow: visible;  // Let the projects overflow the gallery width
+    }
+  
+    .project {
+      flex-shrink: 0;  // Prevent projects from shrinking to fit the container
+    }
+  }
+  
