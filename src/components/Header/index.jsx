@@ -4,6 +4,7 @@ import "./style.scss";
 import GithubLogo from '../../images/github.png';
 import LinkedinLogo from '../../images/linkedin.png';
 import Pigs from '../../images/pigs.png';
+import Yarn from '../../images/grainy-frame.png';
 
 export default function Header() {
     return (
@@ -27,6 +28,8 @@ export default function Header() {
                 <img className="header-drawing" src={Pigs} alt="github" />
             </div>
         </div>    
+        <img src={Yarn} alt="Yarn"  className="yarn-ball" />               
+
 
        
     </section>);
