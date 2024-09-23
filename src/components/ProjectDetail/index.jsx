@@ -31,7 +31,9 @@ const ProjectDetail = ({ project, onBack }) => {
           ))}
         </div>
       </div>
-      <img src={project.imageSrc} alt={project.title} style={{ width: '100%', maxHeight: '500px', objectFit: 'cover' }} />
+      <div className="project-image-wrapper">
+        <img className="project-image" src={project.imageSrc} alt={project.title} style={{ width: '100%', maxHeight: '500px', objectFit: 'cover' }} />
+      </div>
       <p>{project.description}</p>
     </div>
   );

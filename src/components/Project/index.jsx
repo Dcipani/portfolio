@@ -10,23 +10,26 @@ const tagColors = {
 
 const Project = ({ title, imageSrc, tags, onClick }) => {
   return (
-    <div className="project" onClick={onClick}>
-      <img className="project-image" src={imageSrc} alt={title} />
-      <div className="project-overlay">
-        <h3 className="project-title">{title}</h3>
-        <div className="project-tags">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="project-tag"
-              style={{ backgroundColor: tagColors[tag] || '#757575' }}
-            >
-              {tag}
-            </span>
-          ))}
+      <div className="project" onClick={onClick}>
+        <div className="project-border"></div>
+        <div className="project-image-wrapper">
+          <img className="project-image" src={imageSrc} alt={title} />
+        </div>
+        <div className="project-overlay">
+          <h3 className="project-title">{title}</h3>
+          <div className="project-tags">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="project-tag"
+                style={{ backgroundColor: tagColors[tag] || '#757575' }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 

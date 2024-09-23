@@ -1,7 +1,129 @@
-.about-section {
-    p {
-        font-size: 40px;
-        line-height: 1.12;
-        
-    }
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Adjust based on card/image size */
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; /* Space between the card and the image */
+}
+
+.card-border {
+  position: relative ;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-border span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px black solid;
+  transition: .5s;
+}
+.card-border span:nth-child(1){
+  // animation: borderBubble 44s linear infinite;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transform: rotate(0deg);
+
+}
+.card-border span:nth-child(2){
+  // animation: borderBubble 42s linear infinite;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transform: rotate(50deg);
+
+}
+.card-border span:nth-child(3){
+  // animation: borderBubble 38s linear infinite;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transform: rotate(90deg);
+
+}
+.card-border span:nth-child(4){
+  // animation: borderBubble 42s linear infinite;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transform: rotate(1600deg);
+
+}
+.card-border span:nth-child(5){
+  // animation: borderBubble 35s linear infinite;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transform: rotate(240deg);
+}
+
+@keyframes borderBubble {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  color:  black;
+  text-align: left;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: inside disc;
+}
+
+.image-container {
+  position: relative;
+  width: 340px; /* Match card width */
+  height: 240px; /* Match card height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container dimensions */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid black;
+  filter: url(#wavy);
+
+}
+
+.arrow {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
 }

@@ -43,11 +43,13 @@ const App = () => {
   return (
     <div>
       <svg width="0" height="0">
-        <defs>
-          <filter id="turbulence" x="0" y="0">
-            <feTurbulence type="fractalNoise" baseFrequency=".75"   />
+          <filter id="wavy">
+            <feTurbulence x="0" y="0" baseFrequency=".25" numOctaves="5" seed="2"   />
+            <feDisplacementMap in='SourceGraphic' scale="2.5"></feDisplacementMap>
           </filter>
-        </defs>
+        <filter id="turbulence" x="0" y="0">
+            <feTurbulence type="fractalNoise" baseFrequency=".75"   />
+        </filter>
       </svg>
       <div className="noise"></div>
       {selectedProject === null ? (
@@ -59,6 +61,9 @@ const App = () => {
         </>
       ) : (
         <>
+          <Navbar/> 
+          <Header id='home'/> 
+          <About id='about'/> 
           <ProjectDetail project={projectData[selectedProject]} onBack={() => setSelectedProject(null)} />
         </>
       )}
