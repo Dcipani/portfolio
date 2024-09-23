@@ -1,22 +1,44 @@
-import React from "react";
-import { useState } from 'react';
+import React, { useState } from "react";
+import Cactus from '../../images/cactus.png';
+import './style.scss';
 
-import "./style.scss";
-import Cactus from '../../images/cactus.png'
-export default function Navbar() {
-    const [active, setActive] = useState('intro');
+const Navbar = ({ activeSection }) => {
+  const [menuVisible, setMenuVisible] = useState(true);
 
-    return <div className={"navbar"}>
-        <img className="menu-toggle" src={Cactus} alt="cactus"/>
-        <ul>  
-            <li> <a href="#home" id="active"> Home </a></li>
-            <li> <a href="#about"> About </a></li>
-            <li> <a href="#portfolio"> Projects </a></li>
-        </ul>
-    </div>;
-}
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
+  return (
+    <div className="navbar">
+      <img
+        className="menu-toggle"
+        src={Cactus}
+        alt="cactus"
+        onClick={toggleMenu}
+      />
+      <ul>
+        <li className={`${activeSection === 'home' ? 'active' : ''} ${menuVisible ? 'visible' : 'hidden'}`}
+        style={{ '--travel-distance': '-70px'}} // Furthest from cactus
+        >
+          <a href="#home"> Home </a>
+        </li>
+        <li className={`${activeSection === 'about' ? 'active' : ''} ${menuVisible ? 'visible' : 'hidden'}`}
+        style={{ '--travel-distance': '-150px'}} // Furthest from cactus
+        >
+          <a href="#about"> About </a>
+        </li>
+        <li className={`${activeSection === 'projects' ? 'active' : ''} ${menuVisible ? 'visible' : 'hidden'}`} 
+        style={{ '--travel-distance': '-230px'}} // Furthest from cactus
+        >
+          <a href="#projects"> Projects </a>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Navbar;
 
 
 
-
-// export default Navbar;

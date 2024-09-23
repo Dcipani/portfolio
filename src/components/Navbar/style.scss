@@ -1,16 +1,3 @@
-// .navbar{
-//     display: flex;
-//     justify-content: space-between;
-//     padding: 50px 0;
-//     font-size: 24px;
-//     letter-spacing: 1px;
-//     font-family: 'Syncopate', sans-serif;
-//     color: #464646;
-//     font-weight: 600;
-//     text-transform: uppercase;
-// }
-$bg-color: #f5f1ed;
-
 .navbar {
     display: flex;
     align-items: center;
@@ -19,34 +6,93 @@ $bg-color: #f5f1ed;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: $bg-color;
+    background-color: #f5f1ed;
     width: 98%;
     height: 90px;
-    transition: all 0.7s ease-in-out;
-    flex-wrap: wrap;
     padding: 0 3vw;
-    
-}
-.menu-toggle {
-    height: 100px;
-}
-
-.navbar ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 0px 30px;
-}
-
-.navbar ul li a{
-    color: grey;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
-    text-transform: lowercase;
-    color: black;
-    transition: font-size 0.5s;
-}
- 
-.navbar ul li a.active{
-    color: black;
-}
+  
+    .menu-toggle {
+      height: 100px;
+      z-index: 10;
+      cursor: pointer; // Make the cactus icon clickable
+      transition: transform .25s ease-in-out;
+    }
+    .menu-toggle:hover {
+        transform: scale(1.05);
+      }
+  
+    ul {
+      display: flex;
+      transition: opacity 0.5s ease-in-out;
+  
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 30px;
+        position: relative; // For the pseudo-element
+        opacity: 1;
+  
+        a {
+          color: grey;
+          text-decoration: none;
+          font-size: 20px;
+          text-transform: lowercase;
+          color: black;
+          transition: font-size 0.5s;
+        }
+  
+        // Pseudo-element for the red circle
+        &.active::after {
+          content: '';
+          position: absolute;
+          bottom: -20px; // Adjust based on your design
+          left: 50%;
+          transform: translateX(-50%); // Center it
+          width: 18px; // Circle size
+          height: 18px; // Circle size
+          background-color: rgb(158, 72, 72); // Circle color
+          border-radius: 50%; // Make it a circle
+        }
+  
+        // Manage visibility and animation
+        &.hidden {
+          animation: disappear 0.5s forwards;
+          opacity: 0; // Ensure it's invisible
+          pointer-events: none; // Disable interaction
+        }
+  
+        &.visible {
+          animation: appear 0.5s forwards;
+          pointer-events: auto; // Enable interaction
+        }
+      }
+    }
+  }
+  
+  @keyframes disappear {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 0; // Fade out
+    }
+    100% {
+      transform: translateX(calc(-100px + var(--travel-distance))); // Move to the left
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      transform: translateX(calc(-100px + var(--travel-distance))); // Start from the left
+      opacity: 0; // Start invisible
+    }
+    30% {
+      opacity: 0.2; // Briefly visible
+    }
+    100% {
+      transform: translateX(0); // Move to original position
+      opacity: 1; // Fully visible
+    }
+  }
+  
