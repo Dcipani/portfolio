@@ -102,6 +102,15 @@ const App = () => {
           </div>
         </>
       )}
+      <svg width="0" height="0">
+          <filter id="wavy">
+            <feTurbulence x="0" y="0" baseFrequency=".25" numOctaves="5" seed="2"   />
+            <feDisplacementMap in='SourceGraphic' scale="2.5"></feDisplacementMap>
+          </filter>
+        <filter id="turbulence" x="0" y="0">
+            <feTurbulence type="fractalNoise" baseFrequency=".75"   />
+        </filter>
+      </svg>
     </div>
   );
 };

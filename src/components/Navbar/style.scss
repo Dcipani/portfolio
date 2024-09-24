@@ -14,22 +14,24 @@
     .menu-toggle {
       height: 100px;
       z-index: 10;
-      cursor: pointer; // Make the cactus icon clickable
+      cursor: pointer;
       transition: transform .25s ease-in-out;
     }
-    .menu-toggle:hover {
-        transform: scale(1.05);
-      }
   
+    .menu-toggle:hover {
+      transform: scale(1.05);
+    }
+    
     ul {
       display: flex;
+      position: relative; // Relative to position the dot inside it
       transition: opacity 0.5s ease-in-out;
   
       li {
         display: inline-block;
         list-style: none;
         margin: 0 30px;
-        position: relative; // For the pseudo-element
+        position: relative;
         opacity: 1;
   
         a {
@@ -41,58 +43,100 @@
           transition: font-size 0.5s;
         }
   
-        // Pseudo-element for the red circle
-        &.active::after {
-          content: '';
-          position: absolute;
-          bottom: -20px; // Adjust based on your design
-          left: 50%;
-          transform: translateX(-50%); // Center it
-          width: 18px; // Circle size
-          height: 18px; // Circle size
-          background-color: rgb(158, 72, 72); // Circle color
-          border-radius: 50%; // Make it a circle
-        }
-  
-        // Manage visibility and animation
         &.hidden {
           animation: disappear 0.5s forwards;
-          opacity: 0; // Ensure it's invisible
-          pointer-events: none; // Disable interaction
+          opacity: 0;
+          pointer-events: none;
         }
   
         &.visible {
           animation: appear 0.5s forwards;
-          pointer-events: auto; // Enable interaction
+          pointer-events: auto;
         }
       }
-    }
-  }
   
-  @keyframes disappear {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    70% {
-      opacity: 0; // Fade out
-    }
-    100% {
-      transform: translateX(calc(-100px + var(--travel-distance))); // Move to the left
-    }
-  }
-  
-  @keyframes appear {
-    0% {
-      transform: translateX(calc(-100px + var(--travel-distance))); // Start from the left
-      opacity: 0; // Start invisible
-    }
-    30% {
-      opacity: 0.2; // Briefly visible
-    }
-    100% {
-      transform: translateX(0); // Move to original position
-      opacity: 1; // Fully visible
-    }
-  }
-  
+      // Red dot styles
+      .red-dot {
+        position: absolute;
+        bottom: -20px; // Adjust based on design
+        left: 0px; // Starts at left, will move with transform
+        width: 18px; // Circle size
+        height: 18px;
+        background-color: rgb(158, 72, 72);
+        border-radius: 50%;
+        z-index: 11;
+         
+            // Default animation states
+            &.to-section {
+              animation: roll-to-section 0.8s ease forwards;
+            }
+            &.off-cactus {
+              animation: hop-off-cactus 0.8s ease forwards;
+            }
+            
+            &.to-cactus {
+              animation: hop-to-cactus 1s ease forwards;
+            }
+          }
+        }
+        
+        // Keyframe for hopping to a section
+        @keyframes hop-off-cactus {
+          0% {
+            transform: translateX(-45px) translateY(-45px); // Starting at cactus
+          }
+          30% {
+            transform: translateX(-30px) translateY(-55px); // "Hop" upward at midpoint
+          }
+    
+          100% {
+            transform: translateX(0) translateY(0); // Land on the section
+          }
+        }
+        @keyframes roll-to-section {
+            100% {
+              transform: translateX(var(--target-x)) translateY(0); // Land on the section
+            }
+          }
+        
+        // Keyframe for hopping back to the cactus
+        @keyframes hop-to-cactus {
+    
+          60% {
+            transform: translateX(0) translateY(0); // "Hop" upward at midpoint
+          }
+          100% {
+            transform: translateX(-45px) translateY(-45px); // Starting at the section
+          }
+        }
+        
+        
+      }
+      
+      @keyframes disappear {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        70% {
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(calc(-100px + var(--travel-distance)));
+        }
+      }
+      
+      @keyframes appear {
+        0% {
+          transform: translateX(calc(-100px + var(--travel-distance)));
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.2;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      

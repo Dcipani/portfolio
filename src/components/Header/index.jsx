@@ -25,10 +25,9 @@ export default function Header() {
                 </div>
             </div>
             <div class="col-2">
-                <img className="header-drawing" src={Pigs} alt="github" />
+                <img src={Yarn} alt="Yarn"  className="yarn-ball" />               
             </div>
         </div>    
-        <img src={Yarn} alt="Yarn"  className="yarn-ball" />               
 
 
        
