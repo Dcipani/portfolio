@@ -25,11 +25,15 @@
     background-color: transparent;
     border: none;
     font-size: 2rem;
-    transition: transform .2s ease-in;
     cursor: pointer;
+    filter: url(#wavy);
+    color: #4b4b4b;
+    transition: transform .2s ease-in, color .4s ease-in;
 
     &:hover {
       transform:  scale(1.2);
+      color: #121212;
+      
     }
   }
 }

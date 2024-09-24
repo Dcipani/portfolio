@@ -78,23 +78,18 @@ export default function About() {
                 <button onClick={prevCard} className="arrow left-arrow">←</button>
 
                 <div className="card-image-container">
-                    <div className="card-border">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <div className="card" >
-                            <h2>{cards[currentIndex].title}</h2>
-                            <ul>
-                                {cards[currentIndex].bullets.map((bullet, index) => (
-                                    <li key={index}>{bullet}</li>
-                                ))}
-                            </ul>
-                        </div>
+                    <div className="card-container">
+                            <div className="card-border"/>
+                            <div className="card" >
+                                <h2>{cards[currentIndex].title}</h2>
+                                <ul>
+                                    {cards[currentIndex].bullets.map((bullet, index) => (
+                                        <li key={index}>{bullet}</li>
+                                    ))}
+                                </ul>
+                            </div>
                     </div>
 
-                    {/* Image */}
                     <div className="image-container">
 
                         <img 
