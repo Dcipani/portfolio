@@ -12,13 +12,21 @@ import './App.scss';
 import AIChef from './images/AI-Chef.png';
 import Gino from './images/Gino.png';
 import Shazlamb from './images/Shazlamb.png';
+import FSM from './images/fsm.png';
+import BasketballTomato from './images/basketball-tomato.png';
 
 const projectData = [
   {
-    title: "Gino's Pasta",
-    imageSrc: Gino,
-    tags: ['Game Dev'],
-    description: 'This project involves building an image classifier using a convolutional neural network to categorize images into different classes.'
+    title: 'FSAs',
+    imageSrc: FSM,
+    tags: ['AI', 'Syntax', 'Research'],
+    description: 'A React-based frontend dashboard with various widgets and charts.'
+  },
+  {
+    title: 'Basketball Alarm',
+    imageSrc: BasketballTomato,
+    tags: ['AI', 'Computer Vision'],
+    description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
   },
   {
     title: 'AI Chef',
@@ -31,16 +39,23 @@ const projectData = [
     imageSrc: Shazlamb,
     tags: ['Game Dev', 'Music'],
     description: 'A React-based frontend dashboard with various widgets and charts.'
-  }
+  },
+  {
+    title: "Gino's Pasta",
+    imageSrc: Gino,
+    tags: ['Game Dev'],
+    description: 'This project involves building an image classifier using a convolutional neural network to categorize images into different classes.'
+  },
+  
+  
+  
 ];
-
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSection, setActiveSection] = useState('home');
 
-  // Refs for the sections
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -59,11 +74,11 @@ const App = () => {
         end: '40% 15%',
         onEnter: () => {
           setActiveSection(id);
-          window.history.replaceState(null, null, `#${id}`); // Update URL on enter
+          window.history.replaceState(null, null, `#${id}`);
         },
         onEnterBack: () => {
           setActiveSection(id);
-          window.history.replaceState(null, null, `#${id}`); // Update URL on scroll back
+          window.history.replaceState(null, null, `#${id}`);
         },
       });
     });
@@ -75,40 +90,33 @@ const App = () => {
 
   return (
     <div>
-      {selectedProject === null ? (
-        <>
-          <Navbar activeSection={activeSection} />
-          <div ref={homeRef} id="home">
-            <Header />
-          </div>
-          <div ref={aboutRef} id="about">
-            <About />
-          </div>
-          <div ref={portfolioRef} id="projects">
-            <Gallery projects={projectData} setSelectedProject={setSelectedProject} />
-          </div>
-        </>
-      ) : (
-        <>
-          <Navbar activeSection={activeSection} />
-          <div ref={homeRef} id="home">
-            <Header />
-          </div>
-          <div ref={aboutRef} id="about">
-            <About />
-          </div>
-          <div ref={portfolioRef} id="projects">
-            <ProjectDetail project={projectData[selectedProject]} onBack={() => setSelectedProject(null)} />
-          </div>
-        </>
-      )}
+      <Navbar activeSection={activeSection} />
+      <div ref={homeRef} id="home">
+        <Header />
+      </div>
+      <div ref={aboutRef} id="about">
+        <About />
+      </div>
+      <div ref={portfolioRef} id="projects">
+        <Gallery projects={projectData} setSelectedProject={setSelectedProject} />
+      </div>
+
+      {/* Modal for project details */}
+      {selectedProject !== null && (
+      <ProjectDetail
+        project={projectData[selectedProject]}
+        onClose={() => setSelectedProject(null)}
+      />
+    )}
+
+      {/* SVG filters */}
       <svg width="0" height="0">
         <filter id="wavy">
-          <feTurbulence x="0" y="0" baseFrequency=".25" numOctaves="5" seed="2"   />
+          <feTurbulence x="0" y="0" baseFrequency=".25" numOctaves="5" seed="2" />
           <feDisplacementMap in='SourceGraphic' scale="2.5"></feDisplacementMap>
         </filter>
-        <filter id="turbulence" >
-            <feTurbulence x="0" y="0" type="fractalNoise" baseFrequency=".75"   />
+        <filter id="turbulence">
+          <feTurbulence x="0" y="0" type="fractalNoise" baseFrequency=".75" />
         </filter>
       </svg>
       <div className="noise"></div>

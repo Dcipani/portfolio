@@ -6,6 +6,9 @@ const tagColors = {
   'AI': '#9C27B0',      // Purple
   'Python': '#FF5722',  // Orange
   'Music': '#61DAFB',   // Light Blue
+  'Research': '#49EF22',   // Light Blue
+  'Computer Vision': '#642AE1',   // Light Blue
+  'Syntax': '#F1E235',   // Light Blue
 };
 
 const Project = ({ title, imageSrc, tags, onClick }) => {

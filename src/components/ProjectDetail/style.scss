@@ -1,82 +1,167 @@
-.project-detail {
+// .project-detail {
+//     padding: 20px;
+//     max-width: 800px;
+//     margin: auto;
+  
+  
+//     // Title styling
+    // h1 {
+    //   font-size: 2.5rem;
+    //   margin-bottom: 20px;
+    //   color: #333;
+    //   font-family: grunge;
+    // }
+  
+    // // Image styling
+    // .project-image-wrapper {
+    //   position: relative;
+    // }
+    
+    // .project-image {
+    //   max-height: 500px;
+    //   object-fit: cover;
+    //   border-radius: 8px;
+    //   position: relative;
+    //   z-index: 0;
+    // }
+    
+    // .project-image-wrapper::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -4px; /* Match the size of the border */
+    //   left: 0px;
+    //   right: 0px;
+    //   bottom: 0px;
+    //   border-radius: 8px;
+    //   border: 5px solid black; /* Recreate the border */
+    //   filter: url(#wavy); /* Apply the distortion filter to this pseudo-element */
+    //   z-index: 1;
+    // }
+  
+//     // Description styling
+//     p {
+//       font-size: 1.1rem;
+//       line-height: 1.6;
+//       color: #555;
+//       margin-top: 20px;
+//     }
+  
+//     // Tags container styling
+//     .project-tag {
+//       display: inline-block;
+//       padding: 5px 10px;
+//       margin: 5px;
+//       border-radius: 5px;
+//       color: white;
+//       font-size: 1.25rem;
+//     }
+//     .project-header {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+//   }
+  
+
+
+  .project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Dim the background
+    cursor: pointer;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: white;
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  
-    // Button styling for going back to the gallery
-    button {
-      background-color: black;
+    width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
       border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 10px 0;
-      border-radius: 5px;
+      font-size: 20px;
       cursor: pointer;
-  
+      color: black;
+
       &:hover {
-        background-color: #6d6d6d;
+        color: red;
       }
     }
-  
-    // Title styling
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #333;
-      font-family: grunge;
-    }
-  
-    // Image styling
-    .project-image-wrapper {
-      position: relative;
-    }
-    
-    .project-image {
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 8px;
-      position: relative;
-      z-index: 0;
-    }
-    
-    .project-image-wrapper::before {
-      content: '';
-      position: absolute;
-      top: -4px; /* Match the size of the border */
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      border-radius: 8px;
-      border: 5px solid black; /* Recreate the border */
-      filter: url(#wavy); /* Apply the distortion filter to this pseudo-element */
-      z-index: 1;
-    }
-  
-    // Description styling
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-      margin-top: 20px;
-    }
-  
-    // Tags container styling
-    .project-tag {
-      display: inline-block;
-      padding: 5px 10px;
-      margin: 5px;
-      border-radius: 5px;
-      color: white;
-      font-size: 1.25rem;
-    }
+
     .project-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+     
+          color: #333;
+          font-family: grunge;
+      }
+
+      .project-tag {
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 5px;
+        color: white;
+        font-size: 1.25rem;
+      }
+    }
+
+        // Image styling
+        .project-image-wrapper {
+          position: relative;
+        }
+        
+        .project-image {
+          max-height: 550px;
+          border-radius: 8px;
+          position: relative;
+          width: 100%;
+          object-fit: cover;
+          z-index: 0;
+        }
+        
+        .project-image-wrapper::before {
+          content: '';
+          position: absolute;
+          top: -4px; /* Match the size of the border */
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          border-radius: 8px;
+          border: 5px solid black; /* Recreate the border */
+          filter: url(#wavy); /* Apply the distortion filter to this pseudo-element */
+          z-index: 1;
+        }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
     }
   }
-  
+}
