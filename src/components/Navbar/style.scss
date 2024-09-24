@@ -1,145 +1,153 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f5f1ed;
-    width: 98%;
-    height: 90px;
-    padding: 0 3vw;
-  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f5f1ed;
+  width: 98%;
+  height: 90px;
+  padding: 0 3vw;
+
+ 
+  .toggle-wrapper {
+    position: relative;
+    cursor: pointer;
+    z-index: 11;
+    height: 100px;
+    width: 100px;
+
     .menu-toggle {
       height: 100px;
-      z-index: 10;
-      cursor: pointer;
-      transition: transform .25s ease-in-out;
+      width: 100px;
+      transition: none;
     }
-  
-    .menu-toggle:hover {
-      transform: scale(1.05);
-    }
-    
-    ul {
-      display: flex;
-      position: relative; // Relative to position the dot inside it
-      transition: opacity 0.5s ease-in-out;
-  
-      li {
-        display: inline-block;
-        list-style: none;
-        margin: 0 30px;
-        position: relative;
-        opacity: 1;
-  
-        a {
-          color: grey;
-          text-decoration: none;
-          font-size: 20px;
-          text-transform: lowercase;
-          color: black;
-          transition: font-size 0.5s;
-        }
-  
-        &.hidden {
-          animation: disappear 0.5s forwards;
-          opacity: 0;
-          pointer-events: none;
-        }
-  
-        &.visible {
-          animation: appear 0.5s forwards;
-          pointer-events: auto;
-        }
-      }
-  
-      // Red dot styles
-      .red-dot {
+
+    span {
+      position: absolute;
+      top: 46%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 2px;
+      z-index: 12;
+      background: black;
+      transition: background-color 0.2s ease-in-out;
+
+      &::before,
+      &::after {
+        content: '';
         position: absolute;
-        bottom: -20px; // Adjust based on design
-        left: 0px; // Starts at left, will move with transform
-        width:32px; // Circle size
-        // background-color: rgb(158, 72, 72);
-        border-radius: 50%;
-        transform: translate(-45px, -40px) rotate(20deg);
-        z-index: 11;
-         
-            // Default animation states
-            &.to-section {
-                animation: roll-to-section 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-              }
-              &.off-cactus {
-                animation: hop-off-cactus 0.4s cubic-bezier(.8,1, 0.25, 0.1) forwards;
-              }
-              &.to-cactus {
-                animation: hop-to-cactus 0.6s cubic-bezier(0.25, 0.1, 0.8, 1) forwards;
-              }
-          }
-        }
-        
-        // Keyframe for hopping to a section
-        @keyframes hop-off-cactus {
-          0% {
-            transform: translateX(-45px) translateY(-40px) rotate(0deg); // Starting at cactus
-          }
-          35% {
-            transform: translateX(-25px) translateY(-35px); // "Hop" upward at midpoint
-          }
-    
-          100% {
-            transform: translateX(-20px) translateY(12px) rotate(360deg); // Land on the section
-          }
-        }
-        @keyframes roll-to-section {
-     
-            100% {
-              transform: translateX(var(--target-x)) translateY(12px) rotate(360deg); // Land on the section
-            }
-          }
-        
-        // Keyframe for hopping back to the cactus
-        @keyframes hop-to-cactus {
-       
-          60% {
-            transform: translateX(0) translateY(12px) rotate(0deg); // "Hop" upward at midpoint
-          }
-          85% {
-            transform: translateX(-25px) translateY(-35px); // "Hop" upward at midpoint
-          }
-          100% {
-            transform: translateX(-45px) translateY(-40px) rotate(-700deg); // Starting at the section
-          }
-        }
-        
-        
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        transition: transform 0.5s ease-in-out;
       }
-      
-      @keyframes disappear {
-        0% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        70% {
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(calc(-100px + var(--travel-distance)));
-        }
+
+      &::before {
+        transform: translateY(-8px); 
       }
-      
-      @keyframes appear {
-        0% {
-          transform: translateX(calc(-100px + var(--travel-distance)));
-          opacity: 0;
-        }
-        30% {
-          opacity: 0.2;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
+
+      &::after {
+        transform: translateY(8px);
       }
-      
+    }
+
+    &.open span {
+      background-color: transparent;
+      box-shadow: none;
+
+      &::before {
+        transform: rotate(45deg) translateY(0); 
+      }
+
+      &::after {
+        transform: rotate(-45deg) translateY(0); 
+      }
+    }
+  }
+  ul {
+    display: flex;
+    position: relative;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 30px;
+      position: relative;
+
+      a {
+        color: grey;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: lowercase;
+        color: black;
+        z-index: -1;
+        transition: font-size 0.5s;
+      }
+
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &.visible {
+        pointer-events: all;
+        z-index: 1;
+      }
+    }
+
+    .red-dot {
+      position: absolute;
+      bottom: -20px; 
+      left: 0px;
+      width: 32px; 
+      border-radius: 50%;
+      transform: translate(-45px, -40px) rotate(20deg);
+      z-index: 11;
+
+      &.to-section {
+        animation: roll-to-section 0.7s cubic-bezier(0.25, 0.1, 0.25, 0.5) forwards;
+      }
+
+      &.off-cactus {
+        animation: hop-off-cactus 0.4s cubic-bezier(0.8, 1, 0.25, 0.1) forwards;
+      }
+
+      &.to-cactus {
+        animation: hop-to-cactus 0.6s cubic-bezier(0.25, 0.1, 0.8, 1) forwards;
+      }
+    }
+  }
+
+  @keyframes roll-to-section {
+    100% {
+      transform: translateX(var(--target-x)) translateY(12px) rotate(360deg);
+    }
+  }
+
+  @keyframes hop-off-cactus {
+    0% {
+      transform: translateX(-45px) translateY(-40px) rotate(0deg);
+    }
+    35% {
+      transform: translateX(-25px) translateY(-35px);
+    }
+    100% {
+      transform: translateX(-20px) translateY(12px) rotate(360deg);
+    }
+  }
+
+  @keyframes hop-to-cactus {
+    60% {
+      transform: translateX(0) translateY(12px) rotate(0deg);
+    }
+    85% {
+      transform: translateX(-25px) translateY(-35px);
+    }
+    100% {
+      transform: translateX(-45px) translateY(-40px) rotate(-700deg);
+    }
+  }
+}

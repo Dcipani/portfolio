@@ -11,7 +11,10 @@ const Navbar = ({ activeSection }) => {
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
     setJustToggled(true);
+    
   };
+
+  
   const scrollToSection = (sectionId, event) => {
     event.preventDefault();  // Prevent the default anchor click behavior
     const section = document.getElementById(sectionId);
@@ -63,12 +66,14 @@ useEffect(() => {
   }, [activeSection, justToggled, menuVisible]);
   return (
     <div className="navbar">
-      <img
-        className="menu-toggle"
-        src={Cactus}
-        alt="cactus"
-        onClick={toggleMenu}
-      />
+      <div className={`toggle-wrapper ${menuVisible ? 'open' : ''}`} onClick={toggleMenu}>
+          <img
+            className="menu-toggle"
+            src={Cactus}
+            alt="cactus"
+          />
+          <span></span>
+      </div>
       <ul>
         <li className={`home ${activeSection === 'home' ? 'active' : ''} ${menuVisible ? 'visible' : 'hidden'}`}         
             style={{ '--travel-distance': '-75px'}} 
