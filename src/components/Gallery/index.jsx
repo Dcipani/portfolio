@@ -25,10 +25,11 @@ const Gallery = ({ projects, setSelectedProject }) => {
         setCurrentIndex(currentIndex + projectsPerPage);
       }
 
+
     }, 300); 
     setTimeout(() => {
       setIsAnimating(false); 
-    }, 800); 
+    }, 600); 
 
   };
 
@@ -42,7 +43,7 @@ const Gallery = ({ projects, setSelectedProject }) => {
             title={project.title}
             imageSrc={project.imageSrc}
             tags={project.tags}
-            onClick={() => setSelectedProject(index)}
+            onClick={() => setSelectedProject(currentIndex+index)}
           />
         ))}
       </div>

@@ -30,12 +30,6 @@ const projectData = [
     tags: ['AI', 'Computer Vision'],
     description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
   },
-  // {
-  //   title: 'Sound Change Visualizer',
-  //   imageSrc: SoundChange,
-  //   tags: ['AI', 'Syntax', 'Research'],
-  //   description: 'A React-based frontend dashboard with various widgets and charts.'
-  // },
   {
     title: 'RAG Study Pal',
     imageSrc: RAG,
