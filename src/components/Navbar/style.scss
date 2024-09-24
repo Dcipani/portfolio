@@ -60,53 +60,56 @@
         position: absolute;
         bottom: -20px; // Adjust based on design
         left: 0px; // Starts at left, will move with transform
-        width: 18px; // Circle size
-        height: 18px;
-        background-color: rgb(158, 72, 72);
+        width:32px; // Circle size
+        // background-color: rgb(158, 72, 72);
         border-radius: 50%;
+        transform: translate(-45px, -40px) rotate(20deg);
         z-index: 11;
          
             // Default animation states
             &.to-section {
-              animation: roll-to-section 0.8s ease forwards;
-            }
-            &.off-cactus {
-              animation: hop-off-cactus 0.8s ease forwards;
-            }
-            
-            &.to-cactus {
-              animation: hop-to-cactus 1s ease forwards;
-            }
+                animation: roll-to-section 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+              }
+              &.off-cactus {
+                animation: hop-off-cactus 0.4s cubic-bezier(.8,1, 0.25, 0.1) forwards;
+              }
+              &.to-cactus {
+                animation: hop-to-cactus 0.6s cubic-bezier(0.25, 0.1, 0.8, 1) forwards;
+              }
           }
         }
         
         // Keyframe for hopping to a section
         @keyframes hop-off-cactus {
           0% {
-            transform: translateX(-45px) translateY(-45px); // Starting at cactus
+            transform: translateX(-45px) translateY(-40px) rotate(0deg); // Starting at cactus
           }
-          30% {
-            transform: translateX(-30px) translateY(-55px); // "Hop" upward at midpoint
+          35% {
+            transform: translateX(-25px) translateY(-35px); // "Hop" upward at midpoint
           }
     
           100% {
-            transform: translateX(0) translateY(0); // Land on the section
+            transform: translateX(-20px) translateY(12px) rotate(360deg); // Land on the section
           }
         }
         @keyframes roll-to-section {
+     
             100% {
-              transform: translateX(var(--target-x)) translateY(0); // Land on the section
+              transform: translateX(var(--target-x)) translateY(12px) rotate(360deg); // Land on the section
             }
           }
         
         // Keyframe for hopping back to the cactus
         @keyframes hop-to-cactus {
-    
+       
           60% {
-            transform: translateX(0) translateY(0); // "Hop" upward at midpoint
+            transform: translateX(0) translateY(12px) rotate(0deg); // "Hop" upward at midpoint
+          }
+          85% {
+            transform: translateX(-25px) translateY(-35px); // "Hop" upward at midpoint
           }
           100% {
-            transform: translateX(-45px) translateY(-45px); // Starting at the section
+            transform: translateX(-45px) translateY(-40px) rotate(-700deg); // Starting at the section
           }
         }
         
