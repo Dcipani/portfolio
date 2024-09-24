@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.df7f03ca.css",
-    "main.js": "/portfolio/static/js/main.9d62ed8d.js",
+    "main.css": "/portfolio/static/css/main.b9d1a1ff.css",
+    "main.js": "/portfolio/static/js/main.1f9e1977.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/Shazlamb.png": "/portfolio/static/media/Shazlamb.8c9c1a81e51ab405b3d3.png",
     "static/media/Gino.png": "/portfolio/static/media/Gino.1f72a329c19a6a4483ed.png",
@@ -10,14 +10,16 @@
     "static/media/cactus.png": "/portfolio/static/media/cactus.5c5200064697ade2a55a.png",
     "static/media/yarn.png": "/portfolio/static/media/yarn.905e3db11414619f32c7.png",
     "static/media/grunge.ttf": "/portfolio/static/media/grunge.8957c3df8f202786bd6c.ttf",
+    "static/media/fsm.png": "/portfolio/static/media/fsm.cdd2ffd78db4f4704fd8.png",
     "static/media/pigs.png": "/portfolio/static/media/pigs.fd4a62c95c079d831c8d.png",
+    "static/media/basketball-tomato.png": "/portfolio/static/media/basketball-tomato.ba5fbd0de572bbd9c3af.png",
     "index.html": "/portfolio/index.html",
-    "main.df7f03ca.css.map": "/portfolio/static/css/main.df7f03ca.css.map",
-    "main.9d62ed8d.js.map": "/portfolio/static/js/main.9d62ed8d.js.map",
+    "main.b9d1a1ff.css.map": "/portfolio/static/css/main.b9d1a1ff.css.map",
+    "main.1f9e1977.js.map": "/portfolio/static/js/main.1f9e1977.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df7f03ca.css",
-    "static/js/main.9d62ed8d.js"
+    "static/css/main.b9d1a1ff.css",
+    "static/js/main.1f9e1977.js"
   ]
 }
