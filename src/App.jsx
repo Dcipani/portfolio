@@ -14,6 +14,8 @@ import Gino from './images/Gino.png';
 import Shazlamb from './images/Shazlamb.png';
 import FSM from './images/fsm.png';
 import BasketballTomato from './images/basketball-tomato.png';
+import SoundChange from './images/SoundChange.png';
+import RAG from './images/RAG.png';
 
 const projectData = [
   {
@@ -26,6 +28,18 @@ const projectData = [
     title: 'Basketball Alarm',
     imageSrc: BasketballTomato,
     tags: ['AI', 'Computer Vision'],
+    description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
+  },
+  // {
+  //   title: 'Sound Change Visualizer',
+  //   imageSrc: SoundChange,
+  //   tags: ['AI', 'Syntax', 'Research'],
+  //   description: 'A React-based frontend dashboard with various widgets and charts.'
+  // },
+  {
+    title: 'RAG Study Pal',
+    imageSrc: RAG,
+    tags: ['AI'],
     description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
   },
   {
