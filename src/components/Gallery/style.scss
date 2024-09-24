@@ -1,16 +1,61 @@
 .gallery {
-    width: 100%;
-    padding: 20px 0;
-  
-    .gallery-container {
-      display: flex;
-      gap: 35px;
-      flex-wrap: nowrap;  // Prevent wrapping to a new line
-      overflow: visible;  // Let the projects overflow the gallery width
-    }
-  
-    .project {
-      flex-shrink: 0;  // Prevent projects from shrinking to fit the container
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0;
+
+  .gallery-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+
+    &.animating {
+      .project {
+        animation: slideOut .5s ease-in-out forwards; 
+      }
+
     }
   }
+
+  .next-arrow {
+    position: absolute;
+    right: 0;
+    top: 54%;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    transition: transform .2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      transform:  scale(1.2);
+    }
+  }
+}
+
+/* Slide-out animation */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  41% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+
   
+
