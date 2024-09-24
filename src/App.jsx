@@ -56,7 +56,7 @@ const App = () => {
       ScrollTrigger.create({
         trigger: ref.current,
         start: 'top 15%',
-        end: 'bottom 15%',
+        end: '40% 15%',
         onEnter: () => {
           setActiveSection(id);
           window.history.replaceState(null, null, `#${id}`); // Update URL on enter
