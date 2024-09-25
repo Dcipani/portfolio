@@ -7,6 +7,7 @@
 
   .gallery-viewport {
     overflow: hidden; 
+    padding: 10px 0;
     width: 90%;
     max-width: 1200px;
     height: 50%;
@@ -16,6 +17,7 @@
     display: flex;
     transition: transform 0.5s ease-in-out; 
     gap: 60px;
+
   }
 
   .next-arrow {

@@ -1,92 +1,144 @@
 
-.carousel-container {
-  position: relative;
+.rolodex {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 250px; /* Adjust based on card/image size */
-}
-
-.card-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px; /* Space between the card and the image */
-}
-
-.card-container {
-  position: relative;
-  width: 400px;
-  height: 400px;
-}
-
-.card-border {
-  position: absolute ;
-  top: 20px;
-  left: 0;
-  width: 396px;
-  height: 396px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px black solid;
-
-  filter: url(#wavy);
-
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  color:  black;
-  text-align: left;
-  background-color: rgb(221, 210, 197);
-
-}
-
-.card h2 {
-  margin-bottom: 10px;
-}
-
-.card ul {
-  list-style: inside disc;
-}
-
-.image-container {
-  position: relative;
-  width: 340px; /* Match card width */
-  height: 340px; /* Match card height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.carousel-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container dimensions */
-  position: absolute;
-  top: 0;
-  left: 0;
-
-}
-
-.arrow {
-  position: absolute;
-  background: none;
-  border: none;
-  font-size: 2rem;
   cursor: pointer;
-  top: 50%;
-  filter: url(#wavy);
-  transform: translateY(-50%);
+
+  .card-container {
+    position: relative;
+    height: 200px; // Adjust height based on your design
+    width: 300px; // Adjust width based on your design
+    perspective: 1000px; // For 3D effect
+    &.animating {
+      animation: flipRolo .5s ease-in-out;
+    }
+
+    .card {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.5s ease-in-out;
+      backface-visibility: hidden;
+
+      &.top-card {
+        transform: translateY(0); // Show the top card
+      }
+
+      &.bottom-card {
+        transform: translateY(100%); // Hide the bottom card initially
+      }
+    }
+  }
 }
 
-.left-arrow {
-  left: 0;
+
+@keyframes flipRolo {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
 }
 
-.right-arrow {
-  right: 0;
-}
+
+
+
+// .carousel-container {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 250px; /* Adjust based on card/image size */
+// }
+
+// .card-image-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 100px; /* Space between the card and the image */
+// }
+
+// .card-container {
+//   position: relative;
+//   width: 400px;
+//   height: 400px;
+// }
+
+// .card-border {
+//   position: absolute ;
+//   top: 20px;
+//   left: 0;
+//   width: 396px;
+//   height: 396px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: 2px black solid;
+
+//   filter: url(#wavy);
+
+// }
+
+// .card {
+//   width: 100%;
+//   height: 100%;
+//   color:  black;
+//   text-align: left;
+//   background-color: rgb(221, 210, 197);
+
+// }
+
+// .card h2 {
+//   margin-bottom: 10px;
+// }
+
+// .card ul {
+//   list-style: inside disc;
+// }
+
+// .image-container {
+//   position: relative;
+//   width: 340px; /* Match card width */
+//   height: 340px; /* Match card height */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+// }
+
+// .carousel-image {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover; /* Ensures the image covers the container dimensions */
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+
+// }
+
+// .arrow {
+//   position: absolute;
+//   background: none;
+//   border: none;
+//   font-size: 2rem;
+//   cursor: pointer;
+//   top: 50%;
+//   filter: url(#wavy);
+//   transform: translateY(-50%);
+// }
+
+// .left-arrow {
+//   left: 0;
+// }
+
+// .right-arrow {
+//   right: 0;
+// }
