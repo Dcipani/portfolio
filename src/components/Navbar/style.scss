@@ -1,3 +1,4 @@
+
 .navbar {
   display: flex;
   align-items: center;
@@ -35,14 +36,15 @@
       z-index: 12;
       background: black;
       transition: background-color 0.2s ease-in-out;
-
+      
+      background-color: rgb(42, 64, 45);
       &::before,
       &::after {
         content: '';
         position: absolute;
         width: 30px;
         height: 2px;
-        background-color: black;
+        background-color: rgb(42, 64, 45);
         transition: transform 0.5s ease-in-out;
       }
 
