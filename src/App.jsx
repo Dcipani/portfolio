@@ -54,6 +54,25 @@ const projectData = [
     tags: ['Game Dev'],
     description: 'This project involves building an image classifier using a convolutional neural network to categorize images into different classes.'
   },
+  {
+    title: 'AI Chef',
+    imageSrc: AIChef,
+    tags: ['Game Dev', 'AI'],
+    description: 'A React-based frontend dashboard with various widgets and charts.'
+  },
+  {
+    title: 'AI Chef',
+    imageSrc: AIChef,
+    tags: ['Game Dev', 'AI'],
+    description: 'A React-based frontend dashboard with various widgets and charts.'
+  },
+  {
+    title: 'AI Chef',
+    imageSrc: AIChef,
+    tags: ['Game Dev', 'AI'],
+    description: 'A React-based frontend dashboard with various widgets and charts.'
+  },
+
   
   
   

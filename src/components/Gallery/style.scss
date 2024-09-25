@@ -5,61 +5,60 @@
   width: 100%;
   padding: 20px 0;
 
+  .gallery-viewport {
+    overflow: hidden; 
+    width: 90%;
+    max-width: 1200px;
+    height: 50%;
+  }
+
   .gallery-container {
     display: flex;
-    width: 90%;
-    justify-content: space-between;
-
-    &.animating {
-      .project {
-        animation: slideOut .5s ease-in-out forwards; 
-      }
-
-    }
+    transition: transform 0.5s ease-in-out; 
+    gap: 60px;
   }
 
   .next-arrow {
     position: absolute;
     right: 0;
-    top: 54%;
+    top: 49%;
     background-color: transparent;
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    filter: url(#wavy);
     color: #4b4b4b;
-    transition: transform .2s ease-in, color .4s ease-in;
+    transition: transform 0.2s ease-in, color 0.4s ease-in;
 
     &:hover {
-      transform:  scale(1.2);
+      transform: scale(1.2);
       color: #121212;
-      
+    }
+    &.right {
+      right: 0;
+      animation: rotateToRight 0.8s forwards; 
+    }
+
+    &.left {
+      right: 0;
+      animation: rotateToLeft 0.8s forwards; 
     }
   }
 }
 
-/* Slide-out animation */
-@keyframes slideOut {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
+@keyframes rotateToRight {
+  from {
+    transform: rotateY(0deg);
   }
-  40% {
-    transform: translateX(-1000px);
-    opacity: 0;
+  to {
+    transform: rotateY(180deg);
   }
-  41% {
-    transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
 }
 
-
-
-  
-
+@keyframes rotateToLeft {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
