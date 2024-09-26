@@ -6,7 +6,7 @@ import './style.scss';
 const About = () => {  
     const [cardIndex, setCardIndex] = useState(0)
     const numCards = 4;
-    const [lastId, setLastId] = useState(numCards)
+    const [lastId, setLastId] = useState(0)
     const cards = [
         {id: lastId, front: 'Languages', back: 'Card 4 back'},
         {id: 3, front: 'Experience', back: 'Card 3 back'},
