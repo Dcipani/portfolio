@@ -8,10 +8,10 @@ const About = () => {
     const numCards = 4;
     const [lastId, setLastId] = useState(0)
     const cards = [
-        {id: lastId, front: 'Languages', back: 'Card 4 back'},
-        {id: 3, front: 'Experience', back: 'Card 3 back'},
-        {id: 2, front: 'Education', back: 'Card 2 back'},
-        {id: 1, front: 'Interests', back: 'Card 1 back'},
+        {id: lastId, front: 'Languages', back: 'i love ze power of ze mind'},
+        {id: 3, front: 'Experience', back: 'i speak english'},
+        {id: 2, front: 'Education', back: 'i worked'},
+        {id: 1, front: 'Interests', back: 'i learned'},
     ];     
 
     const handleClick = () => {
@@ -39,6 +39,8 @@ const About = () => {
                         style={{ zIndex: setZIndex(card, cardIndex) }} 
                         onClick={handleClick}
                         >
+                            <div className="card-hole-left"></div>
+                            <div className="card-hole-right"></div>
                             <div className="card-front">
                                 {card.front}   
                             </div>

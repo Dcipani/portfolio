@@ -31,7 +31,28 @@
     &.bottom {
       transform: translateY(0) rotateX(0deg) ;
     }
-    
+    .card-hole-left {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      
+      width: 10px;
+      height: 10px;
+      z-index: 100;
+      background-color: black;
+      border-radius: 50%;
+    }
+    .card-hole-right {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      
+      width: 10px;
+      height: 10px;
+      z-index: 100;
+      background-color: black;
+      border-radius: 50%;
+    }
   }
 
 
