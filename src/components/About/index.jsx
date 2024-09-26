@@ -8,10 +8,10 @@ const About = () => {
     const numCards = 4;
     const [lastId, setLastId] = useState(numCards)
     const cards = [
-        {id: lastId, front: 'Card 4 front', back: 'Card 4 back'},
-        {id: 3, front: 'Card 3 front', back: 'Card 3 back'},
-        {id: 2, front: 'Card 2 front', back: 'Card 2 back'},
-        {id: 1, front: 'Card 1 front', back: 'Card 1 back'},
+        {id: lastId, front: 'Languages', back: 'Card 4 back'},
+        {id: 3, front: 'Experience', back: 'Card 3 back'},
+        {id: 2, front: 'Education', back: 'Card 2 back'},
+        {id: 1, front: 'Interests', back: 'Card 1 back'},
     ];     
 
     const handleClick = () => {
