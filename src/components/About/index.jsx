@@ -11,7 +11,7 @@ const About = () => {
         {id: lastId, front: 'Languages', back: 'i love ze power of ze mind'},
         {id: 3, front: 'Experience', back: 'i speak english'},
         {id: 2, front: 'Education', back: 'i worked'},
-        {id: 1, front: 'Interests', back: 'i learned'},
+        {id: 1, front: 'Interests', back: 'i spoke'},
     ];     
 
     const handleClick = () => {
