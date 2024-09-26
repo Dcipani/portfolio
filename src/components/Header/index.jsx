@@ -19,7 +19,7 @@ export default function Header() {
                     <a  href="https://www.github.com/dcipani" target="_blank" rel="noopener noreferrer">
                         <img src={GithubLogo} alt="github"  className="logo" />               
                     </a>
-                    <a  href="https://www.github.com/dcipani" target="_blank" rel="noopener noreferrer">
+                    <a  href="https://www.linkedin.com/in/dario-cipani-b82bb3269" target="_blank" rel="noopener noreferrer">
                         <img src={LinkedinLogo} alt="linkedin" className="logo"/>
                     </a>
                 </div>

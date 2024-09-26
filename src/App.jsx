@@ -25,15 +25,15 @@ const projectData = [
     description: 'A React-based frontend dashboard with various widgets and charts.'
   },
   {
+    title: 'Shazlamb! Rise of the AI DJ',
+    imageSrc: Shazlamb,
+    tags: ['Game Dev', 'Music'],
+    description: 'A React-based frontend dashboard with various widgets and charts.'
+  },
+  {
     title: 'Basketball Alarm',
     imageSrc: BasketballTomato,
     tags: ['AI', 'Computer Vision'],
-    description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
-  },
-  {
-    title: 'RAG Study Pal',
-    imageSrc: RAG,
-    tags: ['AI'],
     description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
   },
   {
@@ -43,10 +43,10 @@ const projectData = [
     description: 'A React-based frontend dashboard with various widgets and charts.'
   },
   {
-    title: 'Shazlamb! Rise of the AI DJ',
-    imageSrc: Shazlamb,
-    tags: ['Game Dev', 'Music'],
-    description: 'A React-based frontend dashboard with various widgets and charts.'
+    title: 'RAG Study Pal',
+    imageSrc: RAG,
+    tags: ['AI'],
+    description: 'A React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. AsperioresA React-based frontend dashboard with various widgets and charts. Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate minus nisi rerum, quaerat natus sed porro ducimus, iure repellat, itaque dolore numquam amet voluptate inventore eligendi deleniti illo. Asperiores.'
   },
   {
     title: "Gino's Pasta",
