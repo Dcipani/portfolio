@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Gallery from './components/Gallery';
 import ProjectDetail from './components/ProjectDetail';
+import Footer from './components/Footer';
 
 import './App.scss';
 import AIChef from './images/AI-Chef.png';
@@ -130,11 +131,12 @@ const App = () => {
 
       {/* Modal for project details */}
       {selectedProject !== null && (
-      <ProjectDetail
+        <ProjectDetail
         project={projectData[selectedProject]}
         onClose={() => setSelectedProject(null)}
-      />
-    )}
+        />
+      )}
+      <Footer />
 
       {/* SVG filters */}
       <svg width="0" height="0">

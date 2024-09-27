@@ -12,6 +12,8 @@ body {
       background-color: $bg-color;
     padding: 0 8vw;
     overflow-x: hidden;
+    overscroll-behavior:none;
+
     
     
   }
