@@ -1,52 +1,85 @@
-
-
-import React, { useEffect, useRef, useState } from "react";
 import SectionHeader from "../SectionHeader";
 import './style.scss';
 
 const About = () => {  
     const cards = [
-        {title: 'interests', points: ['i', 'have', 'interests', ' i', 'promise', 'man']},
-        {title: 'education', points: ['i', 'go', 'to', ' school', 'sometimes']},
-        {title: 'experience', points: ['h', 'e', 'l', ' l', 'o']},
-        {title: 'languages', points: ['english', 'italian', 'german', ' japanese', 'spanish', 'french']},
-    ]
+        { title: 'education', points: ['i', 'go', 'to', ' school', 'sometimes'] },
+        { title: 'experience', points: ['h', 'e', 'l', ' l', 'o'] },
+        { title: 'languages', points: ['english', 'italian', 'german', ' japanese', 'spanish', 'french'] },
+    ];
 
     
-   
-   
-  
-  
+    const cardPositions = [
+        { cx: 278, cy: 201 },
+        { cx: 327, cy: 501 },
+        { cx: 203, cy: 801 }
+    ];
+
+
     return (
-        <section className='about-section'>
-            <SectionHeader title="about" />
-            <div className="corkboard">
-                {cards.map((card, index) => (
-
-                <div key={index} className="card-wrapper">
-                    <div className="card">
-                        <div className="card-hole" key={index} 
-                        />
-                        <div className="card-content">
-
-                            <div className="card-title">{card.title}</div>
-                            <ul className="card-points">
-                                        {card.points.map((point, idx) => (
-                                            <li key={idx}>{point}</li>
-                                        ))}
-                            </ul>         
-                        </div>               
-                    </div>
-                    <div className="card-border"></div>
-                </div>
-                ))}
-            </div>
-
-            
-        </section>
-    )
-
-};
+        // <section className='about-section'>
+        //     <SectionHeader title="about" />
+        <svg id="svg" viewBox="0 0 600 1200" preserveAspectRatio="xMidYMax meet">
+          <path
+            className="theLine"
+            d="M -5,0
+               Q 450 230 300 450 
+               T 130 750
+               Q 100 850 300 1000
+               T 150 1200"
+            fill="none"
+            stroke="white"
+            strokeWidth="10px"
+          />
     
+          {cards.map((card, index) => (
+            <foreignObject key={index} x={cardPositions[index]?.cx} y={cardPositions[index]?.cy} width="300" height="300">
+              <div className="card-wrapper">
+                <div className="card">
+                  <div className="card-hole" />
+                  <div className="card-content">
+                    <div className="card-title">{card.title}</div>
+                    <ul className="card-points">
+                      {card.points.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="card-border"></div>
+              </div>
+            </foreignObject>
+          ))}
+        </svg>
+
+
+
+
+        // </section>
+    );
+};
+
 export default About;
-        
+
+/*             
+            <div className="corkboard" style={{ position: 'relative' }}>
+                {cards.map((card, index) => (
+                    <div key={index} className="card-wrapper">
+                        <div className="card">
+                            <div 
+                                className="card-hole" 
+                            />
+                            <div className="card-content">
+                                <div className="card-title">{card.title}</div>
+                                <ul className="card-points">
+                                    {card.points.map((point, idx) => (
+                                        <li key={idx}>{point}</li>
+                                    ))}
+                                </ul>
+                            </div>               
+                            
+                        </div>
+                        <div className="card-border"></div>
+                    </div>
+                ))}
+            </div> */

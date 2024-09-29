@@ -123,13 +123,12 @@ const App = () => {
         <Header />
       </div>
       <div ref={aboutRef} id="about">
-        <About />
+        <About></About>
       </div>
       <div ref={portfolioRef} id="projects">
         <Gallery projects={projectData} setSelectedProject={setSelectedProject} />
       </div>
 
-      {/* Modal for project details */}
       {selectedProject !== null && (
         <ProjectDetail
         project={projectData[selectedProject]}
@@ -138,7 +137,6 @@ const App = () => {
       )}
       <Footer />
 
-      {/* SVG filters */}
       <svg width="0" height="0">
         <filter id="wavy">
           <feTurbulence x="0" y="0" baseFrequency=".25" numOctaves="5" seed="2" />

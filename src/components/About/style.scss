@@ -1,22 +1,17 @@
-:root {
-  --about-card-size: 255px;
+
+.line {
+  stroke: black;
 }
-.corkboard {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  row-gap: 60px; 
-  padding: 40px;
+
+.ball {
+  background-color: white;
+}
+
   
   .card-wrapper {
     position: relative;
     width: 255px;
     height: 255px;
-    flex-basis: calc(50% - 20px); 
     margin-bottom: 20px; 
 
     .card-border {
@@ -75,4 +70,4 @@
   }
 
 
-}
+// }
