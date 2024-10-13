@@ -16,6 +16,7 @@ import Shazlamb from './images/Shazlamb.png';
 import FSM from './images/fsm.png';
 import BasketballTomato from './images/basketball-tomato.png';
 import SoundChange from './images/SoundChange.png';
+import Rebus from './images/rebus.png';
 import RAG from './images/RAG.png';
 
 const projectData = [
@@ -56,8 +57,8 @@ const projectData = [
     description: 'This project involves building an image classifier using a convolutional neural network to categorize images into different classes.'
   },
   {
-    title: 'AI Chef',
-    imageSrc: AIChef,
+    title: 'AI Rebus Generator',
+    imageSrc: Rebus,
     tags: ['Game Dev', 'AI'],
     description: 'A React-based frontend dashboard with various widgets and charts.'
   },

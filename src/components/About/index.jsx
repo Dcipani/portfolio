@@ -10,27 +10,28 @@ const About = () => {
 
     
     const cardPositions = [
-        { cx: 278, cy: 201 },
-        { cx: 327, cy: 501 },
-        { cx: 203, cy: 801 }
+        { cx: 58, cy: 100 },
+        { cx: 186, cy: 400 },
+        { cx: 0, cy: 750 }
     ];
 
 
     return (
-        // <section className='about-section'>
-        //     <SectionHeader title="about" />
-        <svg id="svg" viewBox="0 0 600 1200" preserveAspectRatio="xMidYMax meet">
+      <>
+        {/* <section className='about-section'> */}
+        <SectionHeader title="about" />
+        <svg id="svg" viewBox="0 0 900 1800" preserveAspectRatio="xMidYMax meet">
           <path
             className="theLine"
             d="M -5,0
-               Q 450 230 300 450 
-               T 130 750
-               Q 100 850 300 1000
-               T 150 1200"
+            Q 450 230 300 450 
+            T 130 750
+            Q 100 850 300 1000
+            T 150 1200"
             fill="none"
-            stroke="white"
+            stroke="red"
             strokeWidth="10px"
-          />
+            />
     
           {cards.map((card, index) => (
             <foreignObject key={index} x={cardPositions[index]?.cx} y={cardPositions[index]?.cy} width="300" height="300">
@@ -52,10 +53,8 @@ const About = () => {
           ))}
         </svg>
 
-
-
-
-        // </section>
+        {/* </section> */}
+        </>
     );
 };
 
