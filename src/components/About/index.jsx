@@ -1,84 +1,68 @@
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeader from "../SectionHeader";
 import './style.scss';
 
-const About = () => {  
-    const cards = [
-        { title: 'education', points: ['i', 'go', 'to', ' school', 'sometimes'] },
-        { title: 'experience', points: ['h', 'e', 'l', ' l', 'o'] },
-        { title: 'languages', points: ['english', 'italian', 'german', ' japanese', 'spanish', 'french'] },
-    ];
+gsap.registerPlugin(ScrollTrigger);
 
-    
-    const cardPositions = [
-        { cx: 58, cy: 100 },
-        { cx: 186, cy: 400 },
-        { cx: 0, cy: 750 }
-    ];
+const About = () => {
+  const blobRefs = useRef([]);
 
+  // Initialize the scroll animations
+  useEffect(() => {
+    blobRefs.current.forEach((blob) => {
+      gsap.fromTo(
+        blob,
+        { y: '100%', opacity: 0 },  // Start from below the viewport and invisible
+        {
+          y: 0,          // Move to final position
+          opacity: 1,    // Fade in
+          duration: 1.5, // Animation duration
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: blob,   // Trigger animation when each blob enters the viewport
+            start: "top 80%", 
+            end: "top 40%",   // Defines how far the user scrolls before reaching the end point
+            scrub: false,     // No smooth scrub, animation plays at fixed rate
+            toggleActions: "play none none none", // Play animation only once
+            markers: false   // Set to true to see debugging markers
+          }
+        }
+      );
+    });
+  }, []);
 
-    return (
-      <>
-        {/* <section className='about-section'> */}
-        <SectionHeader title="about" />
-        <svg id="svg" viewBox="0 0 900 1800" preserveAspectRatio="xMidYMax meet">
-          <path
-            className="theLine"
-            d="M -5,0
-            Q 450 230 300 450 
-            T 130 750
-            Q 100 850 300 1000
-            T 150 1200"
-            fill="none"
-            stroke="red"
-            strokeWidth="10px"
-            />
-    
-          {cards.map((card, index) => (
-            <foreignObject key={index} x={cardPositions[index]?.cx} y={cardPositions[index]?.cy} width="300" height="300">
-              <div className="card-wrapper">
-                <div className="card">
-                  <div className="card-hole" />
-                  <div className="card-content">
-                    <div className="card-title">{card.title}</div>
-                    <ul className="card-points">
-                      {card.points.map((point, idx) => (
-                        <li key={idx}>{point}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="card-border"></div>
-              </div>
-            </foreignObject>
-          ))}
-        </svg>
+  const cards = [
+    { title: 'education', points: ['i', 'go', 'to', 'school', 'sometimes'], fill: '#0F0166', path: "M39.1,-70.3C50.3,-61.2,58.7,-50,65.4,-37.9C72.2,-25.9,77.1,-12.9,77.8,0.4C78.5,13.7,74.8,27.4,67.1,37.8C59.4,48.2,47.7,55.3,35.9,60.1C24,65,12,67.5,-1.8,70.7C-15.6,73.8,-31.3,77.6,-44.3,73.4C-57.3,69.2,-67.7,57.1,-76.2,43.6C-84.7,30.1,-91.3,15,-91.2,0C-91.1,-14.9,-84.4,-29.9,-76.4,-44.3C-68.4,-58.7,-59.1,-72.5,-46.2,-80.6C-33.3,-88.7,-16.6,-90.9,-1.3,-88.6C13.9,-86.3,27.9,-79.4,39.1,-70.3Z" },
+    { title: 'experience', points: ['h', 'e', 'l', 'l', 'o'], fill: '#FF0303', path: "M39.7,-68.5C52.3,-61.6,63.8,-52.5,71.6,-40.8C79.3,-29,83.2,-14.5,81,-1.3C78.7,11.9,70.3,23.8,63.3,36.9C56.3,49.9,50.8,64.1,40.4,69.7C30.1,75.4,15.1,72.5,1.9,69.2C-11.4,66,-22.7,62.5,-36,58.6C-49.2,54.6,-64.3,50.3,-73.1,40.4C-81.8,30.6,-84.2,15.3,-83.5,0.4C-82.9,-14.6,-79.2,-29.1,-70.5,-39C-61.8,-48.8,-48,-54,-35.4,-60.9C-22.8,-67.8,-11.4,-76.5,1.1,-78.4C13.6,-80.3,27.2,-75.5,39.7,-68.5Z" },
+    { title: 'languages', points: ['english', 'italian', 'german', 'japanese', 'spanish', 'french'], fill: '#111036', path: "M35.9,-65.3C46.8,-55.8,56.2,-46.8,65.3,-36C74.4,-25.2,83.2,-12.6,84.2,0.6C85.2,13.8,78.3,27.5,68.3,36.6C58.2,45.8,50.3,50.3,33,54.6C21.1,58.9,10.5,63.1,-2.8,68C-16.1,72.8,-32.3,78.3,-44.5,74.1C-56.6,70,-64.9,56.1,-68.5,42.1C-72.1,28.1,-71,14.1,-72.1,-0.6C-73.2,-15.3,-76.3,-30.6,-72.4,-44C-68.5,-57.4,-57.4,-68.8,-44.2,-77C-30.9,-85.1,-15.5,-89.9,-1.5,-87.3C12.5,-84.8,24.9,-74.8,35.9,-65.3Z" },
+  ];
 
-        {/* </section> */}
-        </>
-    );
+  return (
+    <section className='about-section'>
+      <SectionHeader title="about" />
+      <div className="cork-board">
+        {cards.map((card, index) => (
+          <div
+            className="blob-container"
+            ref={el => blobRefs.current[index] = el} // Attach each blob to the refs array
+            key={index}
+          >
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill={card.fill} d={card.path} transform="translate(100 100)" />
+            </svg>
+            <div className="blob-title">{card.title}</div>
+            <ul className="blob-points">
+              {card.points.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default About;
-
-/*             
-            <div className="corkboard" style={{ position: 'relative' }}>
-                {cards.map((card, index) => (
-                    <div key={index} className="card-wrapper">
-                        <div className="card">
-                            <div 
-                                className="card-hole" 
-                            />
-                            <div className="card-content">
-                                <div className="card-title">{card.title}</div>
-                                <ul className="card-points">
-                                    {card.points.map((point, idx) => (
-                                        <li key={idx}>{point}</li>
-                                    ))}
-                                </ul>
-                            </div>               
-                            
-                        </div>
-                        <div className="card-border"></div>
-                    </div>
-                ))}
-            </div> */

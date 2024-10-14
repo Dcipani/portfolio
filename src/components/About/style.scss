@@ -1,73 +1,60 @@
 
-.line {
-  stroke: black;
+
+
+
+.cork-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+
+  /* By default, display blobs in a row */
+  flex-direction: row;
+
+  /* For smaller screens, display blobs in a column */
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
-.ball {
-  background-color: white;
-}
+.blob-container {
+  flex: 1 1 30%;  /* Allow blobs to take 30% width in larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-  
-  .card-wrapper {
-    position: relative;
-    width: 255px;
-    height: 255px;
-    margin-bottom: 20px; 
-
-    .card-border {
-      position: absolute;
-      top: 0;
-      left: 0;
-      border: 3px solid black;
-      filter: url(#wavy);
-      width: 250px;
-      height: 250px;
-    }
-
-    .card {
-      position: relative;
-      top: 2px;
-      left: 2px;
-      width: 254px;
-      height: 254px;
-      background-color: rgb(239, 235, 184);
-      display: flex;
-      justify-content: center;
-
-      .card-content {
-        text-align: center;
-        width: 100%;
-        padding: 50px 35px;
-
-        .card-title {
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-bottom: 25px;
-        }
-
-        .card-points {
-          list-style-type: disc;
-          padding-left: 20px;
-          text-align: left;
-
-          li {
-            font-size: 1rem;
-            margin-bottom: 5px;
-          }
-        }
-      }
-    
-      .card-hole {
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        width: 10px;
-        height: 10px;
-        background-color: rgb(55, 55, 55);
-        border-radius: 50%;
-      }
-    }
+  /* Adjust the svg size */
+  svg {
+    width: 100%;
+    height: auto;
+    max-width: 300px;  /* Set a maximum width */
   }
 
+  .blob-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+  }
 
-// }
+  .blob-points {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1.25rem;
+      color: white;
+      line-height: 1.5rem;
+    }
+  }
+}
+
