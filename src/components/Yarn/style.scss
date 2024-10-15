@@ -1,0 +1,13 @@
+// ThreadComponent.scss
+.thread-svg {
+    position: fixed; // Keep the SVG fixed to the viewport
+    top: 0;
+    left: 0;
+    pointer-events: none; // Prevent SVG from blocking other elements
+
+    stroke: rgb(114, 49, 49);
+    line {
+      transition: all 0.2s ease; // Optional smooth transition
+    }
+  }
+  

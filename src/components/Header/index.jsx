@@ -3,7 +3,7 @@ import "./style.scss";
 
 import GithubLogo from '../../images/github.png';
 import LinkedinLogo from '../../images/linkedin.png';
-import Pigs from '../../images/pigs.png';
+import Needle from '../../images/needle.png';
 import Yarn from '../../images/yarn.png';
 
 export default function Header() {
@@ -26,6 +26,7 @@ export default function Header() {
             </div>
             <div class="col-2">
                 <img src={Yarn} alt="Yarn"  className="yarn-ball" />               
+                <img src={Needle} alt="Needle"  className="needle" />               
             </div>
         </div>    
 

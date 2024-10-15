@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Gallery from './components/Gallery';
 import ProjectDetail from './components/ProjectDetail';
 import Footer from './components/Footer';
+import Yarn from './components/Yarn';
 
 import './App.scss';
 import AIChef from './images/AI-Chef.png';
@@ -120,6 +121,7 @@ const App = () => {
   return (
     <div>
       <Navbar activeSection={activeSection} />
+      <Yarn></Yarn>
       <div ref={homeRef} id="home">
         <Header />
       </div>
