@@ -25,7 +25,7 @@ export default function Header() {
                 </div>
             </div>
             <div class="col-2">
-                <img src={Yarn} alt="Yarn"  className="yarn-ball" />               
+                {/* <img src={Yarn} alt="Yarn"  className="yarn-ball" />                */}
                 <img src={Needle} alt="Needle"  className="needle" />               
             </div>
         </div>    
