@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.ed1bfffd.css",
-    "main.js": "/portfolio/static/js/main.82a7d2a7.js",
+    "main.css": "/portfolio/static/css/main.d48ab3de.css",
+    "main.js": "/portfolio/static/js/main.f27611f8.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/rebus.png": "/portfolio/static/media/rebus.93154f3f3f2ece8d9791.png",
     "static/media/Shazlamb.png": "/portfolio/static/media/Shazlamb.8c9c1a81e51ab405b3d3.png",
@@ -13,16 +13,16 @@
     "static/media/yarn.png": "/portfolio/static/media/yarn.905e3db11414619f32c7.png",
     "static/media/grunge.ttf": "/portfolio/static/media/grunge.8957c3df8f202786bd6c.ttf",
     "static/media/fsm.png": "/portfolio/static/media/fsm.cdd2ffd78db4f4704fd8.png",
-    "static/media/pigs.png": "/portfolio/static/media/pigs.fd4a62c95c079d831c8d.png",
     "static/media/SoundChange.png": "/portfolio/static/media/SoundChange.aec85931d42d9f6ceba6.png",
     "static/media/basketball-tomato.png": "/portfolio/static/media/basketball-tomato.ba5fbd0de572bbd9c3af.png",
+    "static/media/needle.png": "/portfolio/static/media/needle.6b3ff70260b3895d1826.png",
     "index.html": "/portfolio/index.html",
-    "main.ed1bfffd.css.map": "/portfolio/static/css/main.ed1bfffd.css.map",
-    "main.82a7d2a7.js.map": "/portfolio/static/js/main.82a7d2a7.js.map",
+    "main.d48ab3de.css.map": "/portfolio/static/css/main.d48ab3de.css.map",
+    "main.f27611f8.js.map": "/portfolio/static/js/main.f27611f8.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed1bfffd.css",
-    "static/js/main.82a7d2a7.js"
+    "static/css/main.d48ab3de.css",
+    "static/js/main.f27611f8.js"
   ]
 }
