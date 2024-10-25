@@ -1,19 +1,18 @@
 .svg-container {
   display: flex;
   justify-content: center;
-  height: 100vh; // Full viewport height
-  position: absolute; // Absolute positioning
-  right: -50%; // Adjust this value to move it further right
-  top: 0; // Start at the top of the viewport
-  width: auto; // Allow the width to adjust based on content
+  height: 100vh; 
+  position: absolute; 
+  right: -50%; 
+  top: 0; 
+  width: auto; 
 
-  // Media query for smaller screens
-  @media (max-width: 1200px) { // Adjust breakpoint as needed
-    display: none; // Prevent rendering on small screens
+  @media (max-width: 1000px) { 
+    display: none;
   }
 }
 
 .thread {
   stroke-width: 1;
-  margin-top: 300px; // Adjust as needed
+  margin-top: 320px; 
 }

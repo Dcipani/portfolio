@@ -4,7 +4,6 @@ import "./style.scss";
 import GithubLogo from '../../images/github.png';
 import LinkedinLogo from '../../images/linkedin.png';
 import Needle from '../../images/needle.png';
-import Yarn from '../../images/yarn.png';
 
 export default function Header() {
     return (
