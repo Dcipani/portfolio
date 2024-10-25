@@ -23,7 +23,7 @@ const About = () => {
             trigger: blob,
             start: "-50% 100%",
             end: "-50 90%",
-            scrub: false,
+            scrub: true,
             toggleActions: "play none none none",
             markers: false
           }
