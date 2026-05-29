@@ -1,0 +1,164 @@
+.cube-button {
+  --size: 120px;
+  --depth: calc(var(--size) * 0.22);
+
+  --top: #e884b2;
+  --left: #d66b9a;
+  --bottom: #c85788;
+
+  position: relative;
+
+  width: var(--size);
+  height: var(--size);
+
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  cursor: pointer;
+
+  margin-left: var(--depth);
+  margin-bottom: calc(var(--depth) * 1.8);
+
+  //
+  // HARD SHADOW
+  //
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    top: calc(var(--depth) * 0.95);
+    left: calc(var(--depth) * 0.95);
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    z-index: 0;
+
+    transition:
+      transform 0.08s ease,
+      opacity 0.08s ease;
+  }
+
+  .cube-face {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--top);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: calc(var(--size) * 0.42);
+    font-weight: bold;
+
+    z-index: 2;
+
+    transition:
+      transform 0.08s ease;
+
+    //
+    // LEFT FACE
+    //
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: var(--depth);
+      height: 100%;
+
+      background: var(--left);
+
+      transform:
+        translateX(calc(var(--depth) * -1))
+        skewY(-45deg);
+
+      transform-origin: top right;
+
+      transition:
+        width 0.08s ease,
+        transform 0.08s ease;
+    }
+
+    //
+    // BOTTOM FACE
+    //
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 100%;
+
+      width: 100%;
+      height: var(--depth);
+
+      background: var(--bottom);
+
+      transform:
+        skewX(-45deg);
+
+      transform-origin: top left;
+
+      transition:
+        height 0.08s ease,
+        transform 0.08s ease;
+    }
+  }
+
+  //
+  // HOVER
+  //
+  &:hover .cube-face {
+    transform: translateY(-2px);
+  }
+
+  //
+  // PRESSED
+  //
+  &:active {
+    &::after {
+      transform:
+        translateX(calc(var(--depth) * -0.45))
+        translateY(calc(var(--depth) * 0.45));
+
+      opacity: 0.7;
+    }
+
+    .cube-face {
+      transform:
+        translateX(calc(var(--depth) * -0.55))
+        translateY(calc(var(--depth) * 0.55));
+
+      //
+      // LEFT SIDE compresses
+      //
+      &::before {
+        width: calc(var(--depth) * 0.45);
+
+        transform:
+          translateX(calc(var(--depth) * -0.45))
+          skewY(-45deg);
+      }
+
+      //
+      // BOTTOM SIDE compresses
+      //
+      &::after {
+        height: calc(var(--depth) * 0.45);
+      }
+    }
+  }
+}

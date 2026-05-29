@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 
+import CubeButton from "../CubeButton/index";
 
 const tagColors = {
   'Game Dev': '#4CAF50', // Green
@@ -23,7 +24,7 @@ const ProjectDetail = ({ project, onClose }) => {
     <div className="project-modal">
       <div className="modal-overlay" onClick={onClose}></div>
       <div className="modal-content">
-        <button className="close-button" onClick={onClose}>X</button>
+        <CubeButton className="close-button" onClick={onClose} size={40}>X</CubeButton>
         <div className="project-header">
           <h1>{project.title}</h1>
           <div>

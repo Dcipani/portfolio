@@ -30,7 +30,7 @@
     top: 30%; /* Adjust top position relative to the new height */
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 1.5em;
     color: white;
   }
 
@@ -45,9 +45,9 @@
     text-align: center;
 
     li {
-      font-size: 1rem;
+      font-size: .8em;
       color: white;
-      line-height: 1.5rem;
+      line-height: 1.5em;
     }
   }
 }
