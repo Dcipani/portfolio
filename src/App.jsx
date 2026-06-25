@@ -145,8 +145,19 @@ const App = () => {
           <feTurbulence x="0" y="0" baseFrequency=".25" numOctaves="5" seed="2" />
           <feDisplacementMap in='SourceGraphic' scale="2.5"></feDisplacementMap>
         </filter>
+
         <filter id="turbulence">
-          <feTurbulence x="0" y="0" type="fractalNoise" baseFrequency=".75" />
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".75"
+            result="noise"
+          />
+          <feColorMatrix
+            in="noise"
+            type="saturate"
+            values="0"
+            result="gray"
+          />
         </filter>
       </svg>
       <div className="noise"></div>

@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @font-face {
-  font-family: grunge;
-  src: url(grunge.ttf);
+  font-family: witless;
+  src: url(witless.ttf);
 }
+@font-face {
+  font-family: oswald;
+  src: url(oswald.ttf);
+}
+
 $bg-color: #f5f1ed;
 
 body {
@@ -19,7 +24,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    filter: url(#turbulence) contrast(150%) brightness(50%) ; 
+    filter: url(#turbulence) contrast(250%) brightness(50%) ; 
     pointer-events: none; 
     opacity: .3;
     z-index: 10000;
