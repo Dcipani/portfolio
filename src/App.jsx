@@ -122,7 +122,7 @@ const App = () => {
   return (
     <div>
       <Navbar activeSection={activeSection} />
-      <Yarn></Yarn>
+      {/* <Yarn></Yarn> */}
       <div ref={homeRef} id="home">
         <Header />
       </div>

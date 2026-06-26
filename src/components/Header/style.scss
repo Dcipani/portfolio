@@ -61,12 +61,82 @@
     flex-basis:40%;
 }
 
-
-.yarn-ball {
-    width: 350px;
+.col-2 {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.needle {
-    width: 200px;
-    position: absolute;
-    right: 20vw;
+
+.frog-scene {
+  position: relative;
+  width: min(50vw, 500px);
+  height: 65vh;
+  overflow: visible;
+}
+.saul-block {
+  position: absolute;
+
+  /*
+    adaptive sizing
+  */
+  width: clamp(220px, 50vw, 500px);
+  height: clamp(420px, 75vh, 900px);
+
+  /*
+    pushes it partially offscreen
+  */
+  right: -8vw;
+  top: -8vh;
+
+  background: #d9782b;
+
+  /*
+    irregular rectangle — not smooth blob
+  */
+  clip-path: polygon(
+    3% 2%,
+    16% 0%,
+    35% 4%,
+    58% 1%,
+    83% 3%,
+    97% 7%,
+    100% 22%,
+    98% 42%,
+    100% 66%,
+    96% 84%,
+    92% 97%,
+    70% 99%,
+    48% 96%,
+    25% 100%,
+    7% 95%,
+    2% 78%,
+    0% 55%,
+    2% 32%,
+    0% 14%
+  );
+
+  /*
+    subtle analog wobble
+  */
+  filter: url(#wavy);
+
+  transform: rotate(-2deg);
+}
+
+.frogman {
+  position: absolute;
+  width: 180px;
+
+  /* centered over cube */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /*
+    THIS makes him land ON TOP,
+    not in front of it.
+  */
+  bottom: 250px;
+
+  z-index: 2;
 }
