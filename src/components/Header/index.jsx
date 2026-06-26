@@ -4,21 +4,23 @@ import "./style.scss";
 
 import GithubLogo from '../../images/github.png';
 import LinkedinLogo from '../../images/linkedin.png';
-import Frogman from '../../images/frogman.png';
+import Arm from '../../images/arm.png';
 
 export default function Header() {
+  const cliffWrapperRef = useRef(null);
   const blockRef = useRef(null);
-  const frogRef = useRef(null);
+  const boulderRef = useRef(null);
+  const armRef = useRef(null);
 
   useLayoutEffect(() => {
     const tl = gsap.timeline();
 
-    // orange block slides in
+    // cliff enters from right
     tl.fromTo(
-      blockRef.current,
+      cliffWrapperRef.current,
       {
-        x: 400,
-        rotate: 6,
+        x: 500,
+        rotate: 6
       },
       {
         x: 0,
@@ -28,21 +30,55 @@ export default function Header() {
       }
     );
 
-    // frog drops directly onto top of block
+    // boulder drops onto cliff while cliff enters
     tl.fromTo(
-      frogRef.current,
+      boulderRef.current,
       {
-        y: -600,
-        rotate: -8
+        y: -400,
+        rotate: -30
       },
       {
         y: 0,
-        rotate: 0,
-        duration: 1,
+        rotate: -13,
+        duration: 1.1,
         ease: "bounce.out"
       },
-      "-=0.15"
+      "-=0.9"
     );
+
+    // pause
+    tl.to({}, { duration: 1.5 });
+
+    // arm pokes in
+    tl.fromTo(
+      armRef.current,
+      {
+        x: 250,
+        rotate: -6
+      },
+      {
+        x: -220,
+        rotate: 0,
+        duration: 0.35,
+        ease: "power2.out"
+      }
+    );
+
+    // knock boulder off
+    tl.to(
+      boulderRef.current,
+      {
+        x: -120,
+        y: 220,
+        rotate: -120,
+        duration: 0.75,
+        ease: "power2.in"
+      },
+      "-=0.1"
+    );
+
+    
+
   }, []);
 
   return (
@@ -50,6 +86,7 @@ export default function Header() {
       <div className="col-table">
         <div className="col-1">
           <h1 id="header-text">Hi, I'm Dario.</h1>
+
           <p id="header-text">
             I study Linguistics and Computer Science at Trinity College Dublin.
           </p>
@@ -75,14 +112,27 @@ export default function Header() {
 
         <div className="col-2">
           <div className="frog-scene">
-            <div ref={blockRef} className="saul-block"></div>
+            <div
+              ref={cliffWrapperRef}
+              className="cliff-wrapper"
+            >
+              <div
+                ref={blockRef}
+                className="saul-block"
+              ></div>
 
-            <img
-              ref={frogRef}
-              src={Frogman}
-              alt="frogman"
-              className="frogman"
-            />
+              <div
+                ref={boulderRef}
+                className="boulder"
+              ></div>
+
+              <img
+                ref={armRef}
+                src={Arm}
+                alt="arm"
+                className="poke-arm"
+              />
+            </div>
           </div>
         </div>
       </div>

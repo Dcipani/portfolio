@@ -76,24 +76,10 @@
 }
 .saul-block {
   position: absolute;
-
-  /*
-    adaptive sizing
-  */
-  width: clamp(220px, 50vw, 500px);
-  height: clamp(420px, 75vh, 900px);
-
-  /*
-    pushes it partially offscreen
-  */
-  right: -8vw;
-  top: -8vh;
+  inset: 0;
 
   background: #d9782b;
 
-  /*
-    irregular rectangle — not smooth blob
-  */
   clip-path: polygon(
     3% 2%,
     16% 0%,
@@ -116,12 +102,7 @@
     0% 14%
   );
 
-  /*
-    subtle analog wobble
-  */
   filter: url(#wavy);
-
-  transform: rotate(-2deg);
 }
 
 .frogman {
@@ -139,4 +120,65 @@
   bottom: 250px;
 
   z-index: 2;
+}
+.boulder {
+  position: absolute;
+
+  width: 125px;
+  height: 100px;
+
+  /*
+    lift it so it sits ABOVE the cliff edge
+    instead of cutting into it
+  */
+  top: -95px;
+  left: -32px;
+
+  background: #2f315d;
+
+  /*
+    fewer, funkier planes
+  */
+  clip-path: polygon(
+    8% 72%,
+    14% 28%,
+    36% 4%,
+    68% 0%,
+    92% 20%,
+    100% 56%,
+    82% 90%,
+    38% 100%
+  );
+
+  filter: url(#wavy);
+
+  /*
+    gives it a "leaning" perched feel
+  */
+  transform: rotate(-25deg);
+
+  z-index: 4;
+}
+.cliff-wrapper {
+  position: absolute;
+
+  width: clamp(220px, 50vw, 500px);
+  height: clamp(420px, 75vh, 900px);
+
+  right: -8vw;
+
+  /*
+    moved lower
+  */
+  top: clamp(40px, 6vh, 100px);
+  overflow: visible;
+}
+
+.poke-arm {
+  position: absolute;
+  width: 300px;
+  right: -100px;
+  top: -200px;
+  z-index: 5;
+  pointer-events: none;
 }
