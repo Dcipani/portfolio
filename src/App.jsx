@@ -9,6 +9,7 @@ import Gallery from './components/Gallery';
 import ProjectDetail from './components/ProjectDetail';
 import Footer from './components/Footer';
 import Yarn from './components/Yarn';
+import IrregularBars from './components/IrregularBars';
 
 import './App.scss';
 import AIChef from './images/AI-Chef.png';
@@ -126,7 +127,7 @@ const App = () => {
         <Header />
       </div>
       <div ref={aboutRef} id="about">
-        <About></About>
+        <IrregularBars />
       </div>
       <div ref={portfolioRef} id="projects">
         <Gallery projects={projectData} setSelectedProject={setSelectedProject} />

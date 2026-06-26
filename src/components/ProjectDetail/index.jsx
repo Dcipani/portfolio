@@ -4,15 +4,14 @@ import './style.scss';
 import CubeButton from "../CubeButton/index";
 
 const tagColors = {
-  'Game Dev': '#4CAF50', // Green
-  'AI': '#9C27B0',      // Purple
-  'Python': '#FF5722',  // Orange
-  'Music': '#61DAFB',   // Light Blue
-  'Research': '#49EF22',   // Light Blue
-  'Computer Vision': '#642AE1',   // Light Blue
-  'Syntax': '#F1E235',   // Light Blue
+  'Game Dev': '#338a51ff',
+  'AI': '#C92124',
+  'Python': '#D96E25',
+  'Music': '#0F5D6D',
+  'Research': '#D89B2D',
+  'Computer Vision': '#E34D2D',
+  'Syntax': '#7A5A1B',
 };
-
 
 
 const ProjectDetail = ({ project, onClose }) => {
@@ -27,7 +26,7 @@ const ProjectDetail = ({ project, onClose }) => {
         <CubeButton className="close-button" onClick={onClose} size={40}>X</CubeButton>
         <div className="project-header">
           <h1>{project.title}</h1>
-          <div>
+          <div className="project-tags">
             {project.tags.map((tag, index) => (
               <span
                 key={index}

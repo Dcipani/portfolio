@@ -1,0 +1,97 @@
+.irregular-section {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 8rem 4rem;
+}
+.about-header-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.bike-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 60px;
+  height: 36px;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+}
+.bike-wheel,
+.bike-body {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.bike-wheel {
+  z-index: 1;
+
+  left: 13px;   // horizontal offset
+  top: 14px;    // vertical offset
+
+  width: 78%;
+}
+
+.bike-body {
+  z-index: 2;
+}
+.bars-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bass-bar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-height: 60px;
+
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  clip-path: polygon(
+    0% 8%,
+    12% 2%,
+    28% 6%,
+    45% 0%,
+    62% 5%,
+    80% 2%,
+    100% 7%,
+    100% 92%,
+    86% 97%,
+    70% 93%,
+    50% 98%,
+    30% 95%,
+    12% 99%,
+    0% 93%
+  );
+}
+
+.bar-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.bar-label {
+  color: white;
+  font-family: oswald;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  line-height: 1;
+}
+
+.bar-detail {
+  margin-top: 1rem;
+  color: white;
+  font-family: oswald;
+  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+  opacity: 0.9;
+  max-width: 600px;
+}
