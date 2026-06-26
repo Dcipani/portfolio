@@ -4,63 +4,90 @@
   flex-direction: column;
   width: 100%;
   padding: 20px 0;
+}
 
-  .gallery-viewport {
-    overflow: hidden; 
-    padding: 10px 0;
-    width: 90%;
-    max-width: 1200px;
-    height: 50%;
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-slot {
+  flex-shrink: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.gallery-arrow {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #4b4b4b;
+  transition: transform 0.2s ease-in, color 0.4s ease-in;
+  z-index: 5;
+
+  &:hover {
+    transform: scale(1.2);
+    color: #121212;
   }
 
-  .gallery-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
-    gap: 60px;
-
+  &.left {
+    left: -45px;
   }
 
-  .next-arrow {
-    position: absolute;
-    right: 0;
-    top: 54%;
-    background-color: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #4b4b4b;
-    transition: transform 0.2s ease-in, color 0.4s ease-in;
-
-    &:hover {
-      transform: scale(1.2);
-      color: #121212;
-    }
-    &.right {
-      right: 0;
-      animation: rotateToRight 0.8s forwards; 
-    }
-
-    &.left {
-      right: 0;
-      animation: rotateToLeft 0.8s forwards; 
-    }
+  &.right {
+    right: -45px;
   }
 }
 
-@keyframes rotateToRight {
-  from {
-    transform: rotateY(0deg);
+@media (max-width: 1100px) {
+  .gallery-arrow.left {
+    left: -35px;
   }
-  to {
-    transform: rotateY(180deg);
+
+  .gallery-arrow.right {
+    right: -35px;
   }
 }
 
-@keyframes rotateToLeft {
-  from {
-    transform: rotateY(180deg);
+@media (max-width: 700px) {
+  .gallery-arrow.left {
+    left: -25px;
   }
-  to {
-    transform: rotateY(0deg);
+
+  .gallery-arrow.right {
+    right: -25px;
   }
+}
+
+
+.wug-creature {
+  position: relative;
+  width: clamp(50px, 6vw, 90px);
+  aspect-ratio: 1 / 1;
+  margin: 20px 0 40px 20px;
+}
+
+.wug-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wug-layer path {
+  fill: none;
 }
