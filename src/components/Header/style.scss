@@ -1,64 +1,60 @@
+.header-section {
+  position: relative;
 
-.header-section{
-    position: relative;
-    
-    h1 {
-        font-size: 64px;
-        font-weight: 800;
-        line-height: 1;
-        font-family: witless;
-        color: rgb(46, 62, 46);
-        text-transform: uppercase;
-        opacity: 0;
-        animation: popUp 0.5s ease-out forwards .2s; 
-    }
- 
-      @keyframes popUp {
-        0% {
-          transform: translateY(25px); 
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0); 
-        }
-      }
-
-    p {
-        font-size: 20px;
-        line-height: 1.12;
-        opacity: 0;
-        animation: popUp 0.5s ease-out forwards .4s; 
-
-    }
-   
-}
-.logo-container {
-
+  h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1;
+    font-family: witless;
+    color: rgb(46, 62, 46);
+    text-transform: uppercase;
     opacity: 0;
-    animation: popUp 0.4s ease-out forwards .95s; 
-}
-.logo {
-    height: 50px;
-    color: black;
-    margin-right: 15px;
-    transition: transform .5s ease;
-    cursor: pointer;
-}
-.logo:hover{
-    transform: translateY(-5px) scale(1.05);
+    animation: popUp 0.5s ease-out forwards 0.2s;
+  }
+
+  @keyframes popUp {
+    0% {
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.12;
+    opacity: 0;
+    animation: popUp 0.5s ease-out forwards 0.4s;
+  }
 }
 
-  
-.col-table{
-    display: flex;
-    // width: 80%;
+.logo-container {
+  opacity: 0;
+  animation: popUp 0.4s ease-out forwards 0.95s;
 }
-.col-1{
-    flex-basis: 50%;
-    margin-right: 250px;
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
 }
-.col-2{
-    flex-basis:40%;
+
+.logo:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.col-table {
+  display: flex;
+}
+
+
+.col-1 {
+  flex-basis: 50%;
+  margin-right: 250px;
+  position: relative;
 }
 
 .col-2 {
@@ -74,10 +70,10 @@
   height: 65vh;
   overflow: visible;
 }
+
 .saul-block {
   position: absolute;
   inset: 0;
-
   background: #d9782b;
 
   clip-path: polygon(
@@ -105,80 +101,77 @@
   filter: url(#wavy);
 }
 
-.frogman {
-  position: absolute;
-  width: 180px;
-
-  /* centered over cube */
-  left: 50%;
-  transform: translateX(-50%);
-
-  /*
-    THIS makes him land ON TOP,
-    not in front of it.
-  */
-  bottom: 250px;
-
-  z-index: 2;
-}
-.boulder {
-  position: absolute;
-
-  width: 125px;
-  height: 100px;
-
-  /*
-    lift it so it sits ABOVE the cliff edge
-    instead of cutting into it
-  */
-  top: -95px;
-  left: -32px;
-
-  background: #2f315d;
-
-  /*
-    fewer, funkier planes
-  */
-  clip-path: polygon(
-    8% 72%,
-    14% 28%,
-    36% 4%,
-    68% 0%,
-    92% 20%,
-    100% 56%,
-    82% 90%,
-    38% 100%
-  );
-
-  filter: url(#wavy);
-
-  /*
-    gives it a "leaning" perched feel
-  */
-  transform: rotate(-25deg);
-
-  z-index: 4;
-}
 .cliff-wrapper {
   position: absolute;
-
   width: clamp(220px, 50vw, 500px);
   height: clamp(420px, 75vh, 900px);
-
   right: -8vw;
-
-  /*
-    moved lower
-  */
   top: clamp(40px, 6vh, 100px);
   overflow: visible;
 }
 
-.poke-arm {
+.beet-creature {
   position: absolute;
-  width: 300px;
-  right: -100px;
-  top: -200px;
+  width: 120px;
+  height: 120px;
+
+  top: -75px;
+  left: 20px;
+
   z-index: 5;
-  pointer-events: none;
+}
+
+.beet-creature {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: -75px;
+  left: 20px;
+  z-index: 5;
+}
+
+.beet-creature svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.beet-layer path {
+  fill: none;
+  
+
+  visibility: hidden; // important
+}
+
+
+.landing-bar {
+  position: absolute;
+  top: calc(100% + 61px);
+  left: -1200px;
+
+  width: 900px;
+  height: 70px;
+  background: rgb(46, 62, 46);
+
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+.beet-creature {
+  transform-origin: center bottom;
+}
+
+.active-layer {
+  opacity: 1;
+}
+
+.hidden-layer {
+  opacity: 0;
+}
+
+.beet-layer {
+  position: absolute;
+  inset: 0;
 }

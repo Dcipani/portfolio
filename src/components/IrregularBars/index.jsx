@@ -12,22 +12,26 @@ gsap.registerPlugin(ScrollTrigger);
 const bars = [
   {
     label: 'ABOUT',
-    detail:
-      'Who I am, what I build, and how I think.Who I am, what I build, and how I think.Who I am, what I build, and how I think.',
-    color: '#151515'
+    detail: 'Who I am, what I build, and how I think...',
+    color: '#151515',
+    tilt: -1.5,
+    offsetX: -20
   },
   {
     label: 'WORK',
     detail: 'Projects spanning AI, games, and computational art.',
-    color: '#2f5ca4'
+    color: '#2f5ca4',
+    tilt: 1.8,
+    offsetX: 30
   },
   {
     label: 'CONTACT',
     detail: 'Reach out, collaborate, or just say hello.',
-    color: '#3b357d'
+    color: '#3b357d',
+    tilt: -1.2,
+    offsetX: -10
   }
 ];
-
 const BASE_FLEX = 1;
 const EXPANDED_FLEX = 3;
 const SHRUNK_FLEX = 0.5;
@@ -53,20 +57,20 @@ const IrregularBars = () => {
         validBars,
         {
           x: (i) => (i % 2 === 0 ? '-130%' : '130%'),
-          rotate: () => gsap.utils.random(-5, 5),
+          rotate: (i) => bars[i].tilt + gsap.utils.random(-6, 6),
           y: () => gsap.utils.random(-30, 30),
         },
         {
-          x: 0,
+          x: (i) => bars[i].offsetX,
           y: 0,
-          rotate: 0,
+          rotate: (i) => bars[i].tilt,
           stagger: 0.15,
           ease: 'none',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 75%',
-            end: 'top 20%',
-            scrub: 1
+            start: 'top 90%',
+            end: 'top 0%',
+            scrub: 1.5
           }
         }
       );
@@ -203,7 +207,10 @@ const IrregularBars = () => {
             key={i}
             ref={(el) => (barsRef.current[i] = el)}
             className={`bass-bar ${selected === i ? 'selected' : ''}`}
-            style={{ backgroundColor: bar.color }}
+            style={{
+              backgroundColor: bar.color,
+              transform: `rotate(${bar.tilt}deg) translateX(${bar.offsetX}px)`
+            }}
             onClick={() => setSelected(selected === i ? null : i)}
           >
             <div className="bar-content">
