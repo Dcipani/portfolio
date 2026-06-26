@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2cf7ec82.css",
-    "main.js": "/portfolio/static/js/main.a26de122.js",
+    "main.css": "/portfolio/static/css/main.f6574901.css",
+    "main.js": "/portfolio/static/js/main.32035165.js",
     "static/js/453.a7d99afe.chunk.js": "/portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/rebus.png": "/portfolio/static/media/rebus.93154f3f3f2ece8d9791.png",
     "static/media/Shazlamb.png": "/portfolio/static/media/Shazlamb.8c9c1a81e51ab405b3d3.png",
@@ -12,19 +12,19 @@
     "static/media/oswald.ttf": "/portfolio/static/media/oswald.edb8552582b06075e764.ttf",
     "static/media/cactus.png": "/portfolio/static/media/cactus.5c5200064697ade2a55a.png",
     "static/media/fsm.png": "/portfolio/static/media/fsm.cdd2ffd78db4f4704fd8.png",
+    "static/media/frogman.png": "/portfolio/static/media/frogman.92730ebc6b9c6c21c292.png",
     "static/media/SoundChange.png": "/portfolio/static/media/SoundChange.aec85931d42d9f6ceba6.png",
     "static/media/witless.ttf": "/portfolio/static/media/witless.03faeaf062daef2f23c1.ttf",
     "static/media/basketball-tomato.png": "/portfolio/static/media/basketball-tomato.ba5fbd0de572bbd9c3af.png",
-    "static/media/needle.png": "/portfolio/static/media/needle.6b3ff70260b3895d1826.png",
     "static/media/bike_wheel.png": "/portfolio/static/media/bike_wheel.8790fb86cfe3a5b3c749.png",
     "static/media/bike_body.png": "/portfolio/static/media/bike_body.219ba344e156045de22b.png",
     "index.html": "/portfolio/index.html",
-    "main.2cf7ec82.css.map": "/portfolio/static/css/main.2cf7ec82.css.map",
-    "main.a26de122.js.map": "/portfolio/static/js/main.a26de122.js.map",
+    "main.f6574901.css.map": "/portfolio/static/css/main.f6574901.css.map",
+    "main.32035165.js.map": "/portfolio/static/js/main.32035165.js.map",
     "453.a7d99afe.chunk.js.map": "/portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cf7ec82.css",
-    "static/js/main.a26de122.js"
+    "static/css/main.f6574901.css",
+    "static/js/main.32035165.js"
   ]
 }
