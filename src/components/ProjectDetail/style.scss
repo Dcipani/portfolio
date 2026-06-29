@@ -1,63 +1,108 @@
-
-  
-
-
-  .project-modal {
+.project-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   z-index: 1000;
 
   .modal-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); // Dim the background
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
     cursor: pointer;
   }
 
   .modal-content {
     position: relative;
-    background-color: white;
-    padding: 20px;
     width: 1000px;
-    max-height: 90vh;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4eeda;
+    border-radius: 0;
+    box-shadow: 14px 14px 0 black;
+
+    transform-origin: top center;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+
+  .modal-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 20px;
+
+  background: #f4eeda;
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #333;
+    font-family: witless;
+  }
+}
+
+  .close-button {
+    flex-shrink: 0;
+  }
+
+  .modal-body {
+    flex: 1;
     overflow-y: auto;
-    border-radius: 10px;
+    padding: 20px;
 
-    .close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #c96b5d #f5e6dc;
 
+    &::-webkit-scrollbar {
+      width: 12px;
     }
 
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    &::-webkit-scrollbar-track {
+      background: #f5e6dc;
+    }
 
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-     
-          color: #333;
-          font-family: witless;
-      }
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(
+        180deg,
+        #d97a6c,
+        #b85a4d
+      );
+      border: 2px solid #f5e6dc;
+    }
+  }
 
-      .project-tags {
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+      font-family: witless;
+    }
+  }
+
+ .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  justify-content: flex-end;
-  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .project-tag {
@@ -69,7 +114,7 @@
 
   color: white;
   font-size: 1rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   letter-spacing: 0.03em;
   line-height: 1;
 
@@ -77,7 +122,6 @@
   user-select: none;
   pointer-events: none;
 
-  // soft Bass-style blob
   border-radius:
     28% 22% 24% 30% /
     42% 46% 40% 44%;
@@ -85,7 +129,6 @@
   transform: rotate(-0.7deg);
 }
 
-/* each one gets its own hand-cut imperfection */
 .project-tag:nth-child(1) {
   border-radius:
     26% 24% 29% 21% /
@@ -127,39 +170,36 @@
     45% 40% 46% 42%;
   transform: rotate(0.7deg);
 }
-    }
 
-        // Image styling
-        .project-image-wrapper {
-          position: relative;
-        }
-        
-        .project-image {
-          max-height: 550px;
-          border-radius: 8px;
-          position: relative;
-          width: 100%;
-          object-fit: cover;
-          z-index: 0;
-        }
-        
-        .project-image-wrapper::before {
-          content: '';
-          position: absolute;
-          top: -4px; /* Match the size of the border */
-          left: 0px;
-          right: 0px;
-          bottom: 0px;
-          border-radius: 8px;
-          border: 5px solid black; /* Recreate the border */
-          filter: url(#wavy); /* Apply the distortion filter to this pseudo-element */
-          z-index: 1;
-        }
+  .project-image-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 5px solid black;
+      filter: url(#wavy);
+      z-index: 1;
     }
+  }
+
+  .project-image {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 0;
+    position: relative;
+    z-index: 0;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
   }
 }
