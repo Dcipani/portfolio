@@ -146,7 +146,7 @@ useLayoutEffect(() => {
       const dx = (e.clientX - centerX) / rect.width;
       const dy = (e.clientY - centerY) / rect.height;
 
-      const maxOffset = rect.width * 0.01;
+      const maxOffset = rect.width * 0.005;
 
       eyes.forEach((eye) => {
         gsap.to(eye, {
