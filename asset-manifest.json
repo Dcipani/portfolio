@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.007e7490.css",
-    "main.js": "/portfolio/static/js/main.b563e8a7.js",
+    "main.css": "/portfolio/static/css/main.e02551f5.css",
+    "main.js": "/portfolio/static/js/main.37ec9bb0.js",
     "static/js/453.a7d99afe.chunk.js": "/portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/rebus.png": "/portfolio/static/media/rebus.93154f3f3f2ece8d9791.png",
     "static/media/Shazlamb.png": "/portfolio/static/media/Shazlamb.8c9c1a81e51ab405b3d3.png",
@@ -16,12 +16,12 @@
     "static/media/witless.ttf": "/portfolio/static/media/witless.03faeaf062daef2f23c1.ttf",
     "static/media/basketball-tomato.png": "/portfolio/static/media/basketball-tomato.ba5fbd0de572bbd9c3af.png",
     "index.html": "/portfolio/index.html",
-    "main.007e7490.css.map": "/portfolio/static/css/main.007e7490.css.map",
-    "main.b563e8a7.js.map": "/portfolio/static/js/main.b563e8a7.js.map",
+    "main.e02551f5.css.map": "/portfolio/static/css/main.e02551f5.css.map",
+    "main.37ec9bb0.js.map": "/portfolio/static/js/main.37ec9bb0.js.map",
     "453.a7d99afe.chunk.js.map": "/portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.007e7490.css",
-    "static/js/main.b563e8a7.js"
+    "static/css/main.e02551f5.css",
+    "static/js/main.37ec9bb0.js"
   ]
 }
